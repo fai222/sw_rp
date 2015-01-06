@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Star Wars Roleplay Character Sheet</title>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/foundation.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/vendor/modernizr.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="row container char">
+                <div class="large-6 medium-5 small-12 columns charInputContainer">
+                    <div class="row">
+                        <input id="character_name" class="charInput" type="text"/>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <p>Species:</p>
+                        <input id="species" class="charInput" type="text"/>
+                        <div class="settingsIcon species">
+                            <a><img src="img/icon_settings.png" width="100%" height="auto"></a>
+                            <div class="speciesSettingsContainer">
+                                <div class="row">
+                                        <p>Base Wounds Threshold:</p>
+                                        <input id="base_wounds_threshold" class="speciesSettingsInput" value="0" type="text"/>
+                                </div>
+                                <div class="row">
+                                    <p>Base Strain Threshold</p>
+                                    <input id="base_strain_threshold" class="speciesSettingsInput" value="0" type="text"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Career:</p>
+                        <input id="career" class="charInput" type="text"/>
+                    </div>
+                    <div class="row">
+                        <p>Specialization Trees:</p>
+                        <input id="specialization_trees" class="charInput" type="text"/>
+                    </div>
+                    <div class="row">
+                        <p>Player Name:</p>
+                        <input id="player_name" class="charInput" type="text"/>
+                    </div>
+                </div>
+                <div class="large-4 medium-5 small-12 columns xpContainer">
+                    <div class="xpInputContainer row">
+                        <div class="small-5 columns">
+                            <input id="total_xp" class="xpInput" maxlength="5" value="0" type="tlf"/>
+                            <p>Total XP</p>
+                        </div>
+                        <div class="small-5 columns">
+                            <input id="available_xp" class="xpInput" maxlength="5" value="0" type="tlf"/>
+                            <p>Available XP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-2 columns avatarContainer">
+                    <img src="img/avatar.jpg" width="100%" height="auto">
+                </div>
+            </div>
+
+            <div class="row attributesContainer">
+                <div class="medium-3 small-6 columns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <h2>Soak Value</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <input id="soak_value" class="attributesInput" value="0" type="text" readonly/>
+                                <p>Brawn + Armor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-3 small-6 columns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <h2>Wounds</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-6 small-6 columns">
+                                <input id="wounds_threshold" class="attributesInput" maxlength="2" value="0" type="text" readonly/>
+                                <p>Threshold</p>
+                            </div>
+                            <div class="medium-6 small-6 columns">
+                                <input id="wounds_current" class="attributesInput" maxlength="2" value="0" type="text"/>
+                                <p>Current</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-3 small-6 columns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <h2>Strain</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-6 small-6 columns">
+                                <input id="strain_threshold" class="attributesInput" maxlength="2" value="0" type="text" readonly/>
+                                <p>Threshold</p>
+                            </div>
+                            <div class="medium-6 small-6 columns">
+                                <input id="strain_current" class="attributesInput" maxlength="2" value="0" type="text"/>
+                                <p>Current</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-3 small-6 columns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="medium-12 columns">
+                                <h2>Defense</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-6 small-6 columns">
+                                <input id="defence_ranged" class="attributesInput" maxlength="2" value="0" type="text"/>
+                                <p>Ranged</p>
+                            </div>
+                            <div class="medium-6 small-6 columns">
+                                <input id="defence_melee" class="attributesInput" maxlength="2" value="0" type="text"/>
+                                <p>Melee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row container criticalContainer">
+                <h2>Critical Injury:</h2><input id="critical_injuries" class="critInput" value="None." type="text"/>
+            </div>
+
+            <div class="row characteristicsContainer">
+                <div class="medium-2 small-4 columns container">
+                    <input id="brawn" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <h2>Brawn</h2>
+                </div>
+                <div class="medium-2 small-4 columns container">
+                    <input id="agility" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <h2>Agility</h2>
+                </div>
+                <div class="medium-2 small-4 columns container">
+                    <input id="intellect" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <h2>Intellect</h2>
+                </div>
+                <div class="medium-2 small-4 columns container">
+                    <input id="cunning" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <h2>Cunning</h2>
+                </div>
+                <div class="medium-2 small-4 columns container">
+                    <input id="willpower" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <h2>Willpower</h2>
+                </div>
+                <div class="medium-2 small-4 columns container">
+                    <input id="presence" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <h2>Presence</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="medium-3 small-6 columns tabsContainer">
+                    <div class="container active">
+                        <h2>Skills / Talents</h2>
+                    </div>
+                </div>
+                <div class="medium-3 small-6 columns tabsContainer">
+                    <div class="container">
+                        <h2>Gear</h2>
+                    </div>
+                </div>
+                <div class="medium-3 small-6 columns tabsContainer">
+                    <div class="container">
+                        <h2>Backstory</h2>
+                    </div>
+                </div>
+                <div class="medium-3 small-6 columns tabsContainer">
+                    <div class="container">
+                        <h2>Notes</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row tabContent">
+                <div class="medium-12 columns container">
+                    <div class="row">
+                        <h2>Skills</h2>
+                    </div>
+
+                    <div class="row skillContainer">
+                        <div class="medium-6 columns skillGeneral">
+                            <div class="row header">
+                                <div class="skillName"><h3>General Skills</h3></div>
+                                <div class="skillCareer"><h3>Career</h3></div>
+                                <div class="skillRankContainer"><h3>Rank</h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="skillName"><p>Astrogation (Int)</p></div>
+                                <div class="skillCareer">
+                                    <input id="astrogation_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="astrogation">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="skillName"><p>Athletics (Br)</p></div>
+                                <div class="skillCareer">
+                                    <input id="athletics_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="athletics">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="skillName"><p>Charm (Pr)</p></div>
+                                <div class="skillCareer">
+                                    <input id="charm_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="charm">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="skillName"><p>Coercion (Will)</p></div>
+                                <div class="skillCareer">
+                                    <input id="coercion_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="coercion">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="skillName"><p>Computers (Int)</p></div>
+                                <div class="skillCareer">
+                                    <input id="computers_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="computers">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="skillName"><p>Cool (Per)</p></div>
+                                <div class="skillCareer">
+                                    <input id="cool_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="cool">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="skillName"><p>Coordination (Ag)</p></div>
+                                <div class="skillCareer">
+                                    <input id="coordination_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="coordination">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Deception (Cun)</p></div>
+                                <div class="skillCareer">
+                                    <input id="deception_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="deception">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Discipline (Will)</p></div>
+                                <div class="skillCareer">
+                                    <input id="discipline_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="discipline">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Leadership (Pr)</p></div>
+                                <div class="skillCareer">
+                                    <input id="leadership_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="leadership">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Mechanics (Int)</p></div>
+                                <div class="skillCareer">
+                                    <input id="mechanics_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="mechanics">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Medicine (Int)</p></div>
+                                <div class="skillCareer">
+                                    <input id="medicine_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="medicine">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Negotiation (Pr)</p></div>
+                                <div class="skillCareer">
+                                    <input id="negotiation_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="negotiation">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Perception (Cun)</p></div>
+                                <div class="skillCareer">
+                                    <input id="perception_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="perception">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Piloting - Planetary (Ag)</p></div>
+                                <div class="skillCareer">
+                                    <input id="piloting_planetary_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="piloting_planetary">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Piloting - Space (Ag)</p></div>
+                                <div class="skillCareer">
+                                    <input id="piloting_space_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="piloting_space">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Resilience (Br)</p></div>
+                                <div class="skillCareer">
+                                    <input id="resilience_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="resilience">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Skulduggery (Cun)</p></div>
+                                <div class="skillCareer">
+                                    <input id="skulduggery_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="skulduggery">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Stealth (Ag)</p></div>
+                                <div class="skillCareer">
+                                    <input id="stealth_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="stealth">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Streetwise (Cun)</p></div>
+                                <div class="skillCareer">
+                                    <input id="streetwise_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="streetwise">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Survival (Ag)</p></div>
+                                <div class="skillCareer">
+                                    <input id="survival_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="survival">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="skillName"><p>Vigilance (Will)</p></div>
+                                <div class="skillCareer">
+                                    <input id="vigilance_career" class="skillCareerInput" type="text"/>
+                                </div>
+                                <div class="skillRankContainer" id="vigilance">
+                                    <div class="skillRank one"></div>
+                                    <div class="skillRank two"></div>
+                                    <div class="skillRank three"></div>
+                                    <div class="skillRank four"></div>
+                                    <div class="skillRank five"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="medium-6 columns">
+                            <div class="row">
+                                <div class="medium-12 columns skillCombat">
+                                    <div class="row header">
+                                        <div class="skillName"><h3>Combat Skills</h3></div>
+                                        <div class="skillCareer"><h3>Career</h3></div>
+                                        <div class="skillRankContainer"><h3>Rank</h3></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Brawl (Br)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="brawl_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="brawl">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Gunnery (Ag)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="gunnery_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="gunnery">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Melee (Br)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="melee_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="melee">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Ranged - Light (Ag)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="ranged_light_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="ranged_light">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Ranged - Heavy (Ag)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="ranged_heavy_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="ranged_heavy">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="medium-12 columns skillKnowledge">
+                                    <div class="row header">
+                                        <div class="skillName"><h3>Knowledge Skills</h3></div>
+                                        <div class="skillCareer"><h3>Career</h3></div>
+                                        <div class="skillRankContainer"><h3>Rank</h3></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Core Worlds (Int)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="core_worlds_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="core_worlds">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Education (Int)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="education_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="education">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Lore (Int)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="lore_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="lore">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Outer Rim (Int)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="outer_rim_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="outer_rim">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Underworld (Int)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="underworld_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="underworld">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skillName"><p>Xenology (Int)</p></div>
+                                        <div class="skillCareer">
+                                            <input id="xenology_career" class="skillCareerInput" type="text"/>
+                                        </div>
+                                        <div class="skillRankContainer" id="xenology">
+                                            <div class="skillRank one"></div>
+                                            <div class="skillRank two"></div>
+                                            <div class="skillRank three"></div>
+                                            <div class="skillRank four"></div>
+                                            <div class="skillRank five"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="medium-12 columns container">
+                    <div class="row">
+                        <h2>Talents and Special Abilites</h2>
+                    </div>
+
+                    <div class="row talentContainer">
+                        <div class="medium-12 columns">
+                            <div class="row header">
+                                <div class="talentName">
+                                    <h3>Name</h3>
+                                </div>
+                                <div class="talentPage">
+                                    <h3>Page</h3>
+                                </div>
+                                <div class="talentSummary">
+                                    <h3>Ability Summary</h3>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="talentName">
+                                    <input id="talent_name" class="talentInput" type="text"/>
+                                </div>
+                                <div class="talentPage">
+                                    <input id="talent_page" class="talentInput" type="text"/>
+                                </div>
+                                <div class="talentSummary">
+                                    <input id="talent_summary" class="talentInput" type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="addTalent">
+                                    <div class="addTalentButton">+</div>
+                                    <p>Add talent / ability</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </body>
+</html>

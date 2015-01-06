@@ -1,0 +1,761 @@
+body {
+	background-image: url(../img/bg_stars_l.jpg), url(../img/bg_stars_r.jpg);
+	background-repeat: repeat-y, repeat-y;
+	background-position: left, right;
+	background-color: #151515;
+	font-family: 'Droid Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	margin-top: 2rem;
+}
+
+@media only screen and (max-width: 64em) { 
+	body {
+		margin:0;
+		padding: 2rem;
+	}
+}
+
+@media only screen and (max-width: 40em) { 
+	body {
+		margin:0;
+		padding: 1rem;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Droid Sans', sans-serif;
+	color: #fff;
+}
+
+.row {
+	max-width: 1100px;
+}
+
+.row .row {
+	margin:0;
+}
+
+.column, .columns {
+	padding: 0;
+}
+
+@media only screen and (max-width: 40em) {
+	.show-for-small {
+		display:block;
+	}
+
+	.hide-for-small {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 64em) {
+	.show-for-medium-down {
+		display: block;
+	}
+
+	.hide-for-medium-down {
+		display: none;
+	}
+}
+
+input {
+	font-family: 'Droid Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: transparent;
+	border:0;
+	outline: none;
+	width: 100%;
+}
+
+.container {
+	background-color: #222222;
+	margin-top: 1rem;
+	position: relative;
+	border-radius: 3px;
+}
+
+.char {
+	height: 240px;
+	padding: 2.5rem;
+}
+
+@media only screen and (max-width: 40em) {
+	.char {
+		height: auto;
+		margin-top: 16rem;
+		padding: 1.5rem;
+	}
+}
+
+.charInputContainer {
+	color: #A3A3A3;
+	font-size: 14px;
+	text-transform: uppercase;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+.charInputContainer .row {
+	display: flex;
+}
+
+.charInputContainer hr {
+	color: #363636;
+	background-color: #363636;
+	border-color: #363636;
+	margin: 0.75rem 0 1rem 0;
+}
+
+.charInputContainer p {
+	display: inline-block;
+	font-size: inherit;
+	color: inherit;
+	margin: 0;
+}
+
+.charInput {
+	color: #A3A3A3;
+	font-size: 14px;
+	padding-left: 5px;
+	text-transform: capitalize;
+	font-weight: bold;
+	flex:1;
+}
+
+@media only screen and (max-width: 40em) {
+	.charInputContainer {
+		top: 0%;
+		-webkit-transform: translateY(0%);
+	  	-ms-transform: translateY(0%);
+	  	transform: translateY(0%);
+	}
+
+	.charInputContainer .row {
+		display: flex;
+		flex-wrap:wrap;
+	}
+
+	.charInput {
+		flex-basis:length(100);
+	}
+}
+
+#character_name {
+	font-size: 30px;
+	font-weight: bold;
+	padding: 0;
+	width: 100%;
+}
+
+.settingsIcon.species {
+	display: inline-block;
+	float: right;
+	width: 18px;
+	line-height: 0;
+}
+
+.settingsIcon a img {
+	opacity: 0.3;
+	transition:all 0.3s ease;
+}
+
+.settingsIcon.species a:hover img {
+	opacity: 0.6;
+}
+
+.speciesSettingsContainer {
+	background-color: #1E1E1E;
+	max-width: 150px;
+	padding: 1rem;
+	opacity: 1;
+	position: absolute;
+	right: 0px;
+	top: 15px;
+	border-radius: 3px;
+	transform:scale(0.01);
+
+	transform-origin:60%;
+	visibility: hidden;
+	transition:all 0.1s ease-out;
+}
+
+.speciesSettingsContainer.active {
+	transform:scale(1);
+	visibility: visible;
+	right: 40px;
+}
+
+.speciesSettingsContainer:after, .speciesSettingsContainer:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.speciesSettingsContainer:after {
+	border-left-color: #1E1E1E;
+	border-width: 10px;
+	margin-top: -10px;
+}
+
+.speciesSettingsContainer .row {
+	display: flex;
+	margin-bottom: 0.5rem;
+}
+
+.speciesSettingsContainer .row:last-child {
+	margin-bottom: 0rem;
+}
+
+.speciesSettingsContainer p {
+	text-transform: capitalize;
+	font-size: 12px;
+	margin: 0;
+	flex:2;
+}
+
+.speciesSettingsInput {
+	border-radius: 3px;
+	flex:1;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: #8A2F2A;
+}
+
+.xpContainer {
+	padding: 0 2rem;
+	max-width: 340px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 40em) {
+	.xpContainer {
+		padding: 0;
+		top: 0%;
+		-webkit-transform: translateY(0%);
+	  	-ms-transform: translateY(0%);
+	  	transform: translateY(0%);
+	  	margin-top: 2rem;
+	}
+}
+
+.xpInputContainer {
+	background-color: #1F1F1F;
+	border-radius: 100px;
+	padding:1.5rem 2rem;
+}
+
+.xpInputContainer p {
+	color:inherit;
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+}
+
+.xpInput {
+	width: 100%;
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	color: inherit;
+}
+
+.xpInputContainer .columns:first-child {
+	color: #A0332D;
+}
+
+.xpInputContainer .columns:last-child {
+	color: #44789A;
+}
+
+.avatarContainer {
+	border-radius: 300px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 40em) {
+	.avatarContainer {
+		position: absolute;
+		max-width: 200px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		top: -15rem;
+	}
+}
+
+.attributesContainer > .columns {
+	padding: 0 0.5rem;
+}
+
+.attributesContainer > .columns:first-child {
+	padding-left: 0;
+}
+
+.attributesContainer > .columns:last-child {
+	padding-right: 0;
+}
+
+@media only screen and (max-width: 40em) {
+	.attributesContainer > .columns {
+		padding: 0 0.5rem;
+	}
+
+	.attributesContainer > .columns:nth-child(2) {
+		padding-right: 0;
+	}
+
+	.attributesContainer > .columns:nth-child(3) {
+		padding-left: 0;
+	}
+}
+
+.attributesContainer .container {
+	padding: 0rem;
+}
+
+.attributesContainer .container > .row:first-child {
+	padding: 1.3rem 0;
+	border-bottom: 1px solid #363636;
+}
+
+.attributesContainer .container > .row:last-child {
+	padding: 1.5rem;
+}
+
+.attributesContainer h2 {
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #A0A0A0;
+	line-height: 15px;
+	margin-bottom: 0;
+	margin-top: 0.2rem;
+}
+
+.attributesContainer p {
+	color: inherit;
+	text-align: center;
+	font-size: 12px;
+	line-height: 12px;
+	margin: 0;
+}
+
+.attributesContainer .container .row .columns:first-child {
+	color: #8A2F2A;
+}
+
+.attributesContainer .container .row .columns:last-child {
+	color: #3D6985;
+}
+
+.attributesInput {
+	width: 100%;
+	font-size: 30px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	color: inherit;
+}
+
+.criticalContainer {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 1.7rem 1.5rem;
+}
+
+.criticalContainer h2 {
+	color: #979696;
+	font-size: 15px;
+	line-height: 15px;
+	margin-right: 1rem;
+	margin-bottom: 0.5rem;
+	margin-top:0.5rem;
+	text-transform: uppercase;
+}
+
+.critInput {
+	background-color: #D8D8D8;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
+	margin:0;
+	border-radius: 3px;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	color: #393939;
+	font-size: 12px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.characteristicsContainer {
+	text-align: center;
+	margin-top:1rem;
+}
+
+.characteristicsContainer .container {
+	padding: 1.5rem 0;
+	margin-top: 0;
+	border-radius: 0;
+}
+
+.characteristicsContainer .container:first-child {
+	border-radius: 3px 0 0 3px;
+}
+
+.characteristicsContainer .container:last-child {
+	border-radius: 0 3px 3px 0;
+}
+
+.characteristicsContainer .container:nth-child(odd) {
+	background-color: #1E1E1E;
+}
+
+.characteristicsContainer .characteristicsInput {
+	background-color: #D8D8D8;
+	border-radius: 300px;
+	width: 76px;
+	height: 76px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 76px;
+	vertical-align: middle;
+	font-size: 35px;
+	color: #222222;
+	padding-top: 3px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.characteristicsContainer h2 {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #A0A0A0;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0.6rem;
+}
+
+.tabsContainer {
+	padding: 0 0.5rem;
+}
+
+.tabsContainer:first-child {
+	padding-left: 0;
+}
+
+.tabsContainer:last-child {
+	padding-right: 0;
+}
+
+@media only screen and (max-width: 40em) {
+	.tabsContainer:nth-child(2) {
+		padding-right: 0;
+	}
+
+	.tabsContainer:nth-child(3) {
+		padding-left: 0;
+	}
+}
+
+.tabsContainer .container {
+	padding: 1rem;
+	cursor: pointer;
+	transition:all 0.3s ease;
+}
+
+.tabsContainer .container:hover {
+	background-color: #302F2F;
+}
+
+.tabsContainer .container.active {
+	background-color: #302F2F;
+}
+
+.tabsContainer .container:after {
+	content: "";
+	width: 100px;
+	height: 4px;
+	display: block;
+	position: absolute;
+	border-color: transparent transparent #151515 transparent;
+    border-style: solid;
+    border-width: 4px;
+    left: 50%;
+    bottom: 0;
+    transform:translateX(-50%) translateY(4px);
+    transition:all 0.4s ease;
+}
+
+.tabsContainer .container:hover:after {
+	content: "";
+	bottom: 0px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.tabsContainer .container.active:after {
+	content: "";
+	bottom: 0px;
+    left: 50%;
+    transform:translateX(-50%);
+}
+
+.tabsContainer .container h2 {
+	color: #919191;
+	font-size:15px;
+	text-align: center;
+	margin:0;
+	text-transform: uppercase;
+}
+
+.tabContent {
+	margin-bottom: 3rem;
+}
+
+.tabContent h2 {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #A0A0A0;
+	margin-bottom: 0.5rem;
+	margin-left: 1rem;
+}
+
+.tabContent > .columns {
+	padding:2rem;
+}
+
+@media only screen and (max-width: 40em) {
+	.tabContent > .columns {
+		padding:1rem;
+	}
+}
+
+.skillGeneral, .skillCombat, .skillKnowledge {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.skillGeneral > .row, .skillCombat > .row, .skillKnowledge > .row {
+	border-bottom: 1px solid #BAB3B3;
+}
+
+.skillGeneral > .row:first-child, .skillCombat > .row:first-child, .skillKnowledge > .row:first-child {
+	padding-top: 0;
+}
+
+.skillGeneral > .row:last-child, .skillCombat > .row:last-child, .skillKnowledge > .row:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.skillGeneral .row, .skillCombat .row, .skillKnowledge .row {
+	display: flex; 
+	padding: 0.5rem 0;
+	align-items: center;
+}
+
+.skillCombat {
+	margin-bottom: 1rem;
+}
+
+.skillContainer > .columns:last-child {
+	padding-left: 1rem;
+}
+
+@media only screen and (max-width: 40em) {
+	.skillContainer > .columns:last-child {
+		padding: 0;
+	}
+
+	.skillCombat {
+		margin-top: 1rem;
+	}
+}
+
+.skillContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.skillContainer p {
+	font-size: 12px;
+	line-height: 12px;
+	color: #393939;
+	margin: 0;
+}
+
+.skillCareerInput {
+	font-size: 12px;
+	color: #393939;
+	display: block;
+}
+
+.skillName {
+	flex: 3;
+	border-right: 1px solid #BAB3B3;
+}
+
+.skillCareer {
+	flex: 2;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.skillRankContainer {
+	flex: 3;
+	display: flex;
+}
+
+.header .skillName, .header .skillCareer, .skillRankContainer {
+	border-right: 0;
+	padding: 0;
+}
+
+.skillRank {
+	flex:5;
+	height: 10px;
+	background-color: #CBCBCB;
+	border:1px solid #979797;
+	border-right: 0;
+	cursor: pointer;
+	transition:all 0.25s ease-out;
+}
+
+.skillRank:hover {
+	background-color: #ababab;
+
+}
+
+.skillRank:first-child {
+	border-radius: 4px 0 0 4px;
+}
+
+.skillRank:last-child {
+	border-radius: 0 4px 4px 0;
+	border-right:1px solid #979797;
+}
+
+.skillRank.ranked {
+	background-color: #84CC57;
+}
+
+.skillRank.trained {
+	background-color: #DDC045;
+}
+
+.talentContainer {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.talentContainer .row {
+	display: flex;
+	padding:0.5rem 0;
+	border-bottom: 1px solid #BAB3B3;
+}
+
+.talentContainer .row:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.talentContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.talentInput {
+	font-size: 12px;
+	color: #393939;
+	display: block;
+}
+
+.talentName {
+	flex:2;
+	padding-right: 0.5rem;
+	
+}
+
+.talentPage {
+	flex:1;
+	border-left: 1px solid #BAB3B3;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.talentSummary {
+	flex:6;
+	border-left: 1px solid #BAB3B3;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.header .talentName, .header .talentPage, .header .talentSummary {
+	border-color:#D8D8D8;
+	padding-left: 0;
+}
+
+.addTalent {
+	color: #393939;
+	cursor: pointer;
+	transition:all 0.3s ease;
+}
+
+.addTalent:hover {
+	color:#2f4b5f;
+}
+
+.addTalent:hover .addTalentButton {
+	background-color:#2f4b5f;
+}
+
+.addTalentButton {
+	background-color: #3C6783;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	border-radius: 20px;
+	padding-left: 1px;
+	padding-top: 1px;
+	display: inline-block;
+	transition:all 0.3s ease;
+}
+
+.addTalent p {
+	font-size: 12px;
+	padding-left: 0.5rem;
+	margin:0;
+	margin-top: 0.1rem;
+	color: inherit;
+	display: inline-block;
+}
