@@ -55,6 +55,6 @@
 			die("ERROR: " . $e->getMessage());
 		}
     } else {
-    	header("Location: php/login.php");
+    	header("Location: login.php");
     }
 ?>
