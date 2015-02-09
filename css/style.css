@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .row {
-	max-width: 1100px;
+	max-width: 1000px;
 }
 
 .row .row {
@@ -66,6 +66,19 @@ input {
 	border:0;
 	outline: none;
 	width: 100%;
+	transition:all 0.2s ease;
+}
+
+input:focus {
+	color:#3D6782;
+}
+
+textarea {
+	outline: 0;
+}
+
+textarea:focus {
+	color:#3D6782!important;
 }
 
 .container {
@@ -445,6 +458,8 @@ input {
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
+/*---------TABS CONTAINER---------*/
+
 .characteristicsContainer h2 {
 	font-size: 14px;
 	text-transform: uppercase;
@@ -536,7 +551,6 @@ input {
 	text-transform: uppercase;
 	color: #A0A0A0;
 	margin-bottom: 0.5rem;
-	margin-left: 1rem;
 }
 
 .tabContent > .columns {
@@ -548,6 +562,8 @@ input {
 		padding:1rem;
 	}
 }
+
+/*---------SKILLS & TALENTS---------*/
 
 .skillGeneral, .skillCombat, .skillKnowledge {
 	background-color: #D8D8D8;
@@ -760,10 +776,64 @@ input {
 	display: inline-block;
 }
 
+/*-----------GEAR & EQUIPMENT-----------*/
+
+.row.gearInfoContainer {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+.gearInfoContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 15px;
+}
+
+.gearInfoContainer .columns {
+	display: flex;
+}
+
+.creditsContainer h3 {
+	margin-right: 0.7rem;
+}
+
+.creditsContainer input {
+	font-size: 14px;
+	padding: 0;
+	line-height: 0;
+}
+
+.encumbranceContainer h3 {
+	text-align: right;
+	font-weight: normal;
+	width: 100%;
+}
+
+.encumbranceThreshold {
+	font-weight: bold;
+}
+
+.encumbranceCurrent {
+	font-weight: bold;
+}
+
+.encumbranceCurrent.underThreshold {
+	color:#447ea8;
+}
+
+.encumbranceCurrent.aboveThreshold {
+	color:#8A2F2A;
+}
+
 .weaponContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
 	padding: 1rem;
+	margin-bottom: 1rem;
 }
 
 .weaponContainer .row {
@@ -801,6 +871,7 @@ input {
 .weaponContainer .row > div.weaponName {
 	flex:5;
 	border-left: none;
+	padding-left: 0;
 }
 
 .weaponContainer .row > .weaponSkill {
@@ -878,6 +949,481 @@ input {
 }
 
 .addWeapon p {
+	font-size: 12px;
+	padding-left: 0.5rem;
+	margin:0;
+	margin-top: 0.1rem;
+	color: inherit;
+	display: inline-block;
+}
+
+.armor {
+	padding-right: 0.5rem;
+}
+
+.armorContainer {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.armorContainer .row {
+	display: flex;
+	padding:0.5rem 0;
+	border-bottom: 1px solid #BAB3B3;
+}
+
+.armorContainer .row:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.armorContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.armorInput {
+	font-size: 12px;
+	color: #393939;
+	display: block;
+}
+
+.armorContainer .row > div {
+	flex:2;
+	border-left: 1px solid #BAB3B3;
+	padding: 0 0.5rem;
+	line-height: 14px;	
+}
+
+.armorContainer .row > div.armorName {
+	flex:5;
+	border-left: none;
+	padding-left: 0;
+}
+
+.armorContainer .row > .armorPage {
+	flex:3;
+}
+
+.armorContainer .row > .armorHardpoints {
+	flex:1;
+}
+
+.armorContainer .row > .armorEncumbrance {
+	flex:2;
+}
+
+.armorContainer .row > .armorAttachment {
+	flex:1;
+	border-left:0;
+	text-align: center;
+}
+
+.armorContainer .header > div {
+	border:none;
+	padding-left: 0;
+	padding-right: 0.5rem;
+}
+
+.addArmor {
+	color: #393939;
+	cursor: pointer;
+	transition:all 0.3s ease;
+	border-left: 0!important;
+}
+
+.addArmor:hover {
+	color:#2f4b5f;
+}
+
+.addArmor:hover .addArmorButton {
+	background-color:#2f4b5f;
+}
+
+.addArmorButton {
+	background-color: #3C6783;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	border-radius: 20px;
+	padding-left: 1px;
+	padding-top: 1px;
+	display: inline-block;
+	transition:all 0.3s ease;
+}
+
+.addArmor p {
+	font-size: 12px;
+	padding-left: 0.5rem;
+	margin:0;
+	margin-top: 0.1rem;
+	color: inherit;
+	display: inline-block;
+}
+
+.item {
+	padding-left: 0.5rem;
+}
+
+.itemContainer {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.itemContainer .row {
+	display: flex;
+	padding:0.5rem 0;
+	border-bottom: 1px solid #BAB3B3;
+}
+
+.itemContainer .row:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.itemContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.itemInput {
+	font-size: 12px;
+	color: #393939;
+	display: block;
+}
+
+.itemContainer .row > div {
+	flex:2;
+	border-left: 1px solid #BAB3B3;
+	padding: 0 0.5rem;
+	line-height: 14px;	
+}
+
+.itemContainer .row > div.itemName {
+	flex:5;
+	border-left: none;
+	padding-left: 0;
+}
+
+.itemContainer .row > .itemPage {
+	flex:2;
+}
+
+.itemContainer .row > .itemQuantity {
+	flex:1;
+}
+
+.itemContainer .row > .itemEncumbrance {
+	flex:2;
+}
+
+.itemContainer .header > div {
+	border:none;
+	padding-left: 0;
+	padding-right: 0.5rem;
+}
+
+.addItem {
+	color: #393939;
+	cursor: pointer;
+	transition:all 0.3s ease;
+	border-left: 0!important;
+}
+
+.addItem:hover {
+	color:#2f4b5f;
+}
+
+.addItem:hover .addItemButton {
+	background-color:#2f4b5f;
+}
+
+.addItemButton {
+	background-color: #3C6783;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	border-radius: 20px;
+	padding-left: 1px;
+	padding-top: 1px;
+	display: inline-block;
+	transition:all 0.3s ease;
+}
+
+.addItem p {
+	font-size: 12px;
+	padding-left: 0.5rem;
+	margin:0;
+	margin-top: 0.1rem;
+	color: inherit;
+	display: inline-block;
+}
+
+/*----------BACKSTORY----------*/
+
+.backstoryContainer {
+	padding-right: 0.5rem;
+}
+
+.backstoryContainer > .row {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.backstoryContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.backstoryContainer textarea {
+	border:1px solid #D8D8D8;
+	background-color: transparent;
+	width: 100%;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 12px;
+	color: #414141;
+	margin-top: 0.5rem;
+	border-radius: 2px;
+	transition:all 0.3s ease-out;
+	padding: 0;
+}
+
+.backstoryContainer textarea:focus {
+	border:1px solid #8a8384;
+	padding: 3px;
+}
+
+.obligationContainer {
+	padding-left: 0.5rem;
+}
+
+.obligationContainer > .row {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.obligationContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.obligationContainer > .row > h3 {
+	margin-bottom: 0.5rem;
+}
+
+.obligationContainer .row .row {
+	display: flex;
+	margin-bottom: 0.2rem;
+}
+
+.obligationContainer .row .row > h3 {
+	font-size: 12px;
+	line-height: 14px;
+	margin-right: 0.2rem;
+}
+
+.obligationInput {
+	font-size: 12px;
+	line-height: 12px;
+	color: #393939;
+	display: block;
+	flex:1;
+}
+
+.obligationContainer .obligationDescription {
+	 -webkit-flex-direction: column;
+   	flex-direction: column;
+}
+
+.obligationContainer textarea {
+	border:1px solid #D8D8D8;
+	background-color: transparent;
+	width: 100%;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 12px;
+	color: #414141;
+	border-radius: 2px;
+	transition:all 0.2s ease-out;
+	min-height: 0px;
+	padding:0;
+}
+
+.obligationContainer textarea:focus {
+	border:1px solid #8a8384;
+	padding: 3px;
+}
+
+.obligationContainer hr {
+	border-color:#BAB3B3;
+	background-color: #BAB3B3;
+	color:#BAB3B3;
+	margin: 1rem 0;
+}
+
+.addObligation {
+	color: #393939;
+	cursor: pointer;
+	transition:all 0.3s ease;
+	border-left: 0!important;
+}
+
+.addObligation:hover {
+	color:#2f4b5f;
+}
+
+.addObligation:hover .addObligationButton {
+	background-color:#2f4b5f;
+}
+
+.addObligationButton {
+	background-color: #3C6783;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	border-radius: 20px;
+	padding-left: 1px;
+	padding-top: 1px;
+	display: inline-block;
+	transition:all 0.3s ease;
+}
+
+.addObligation p {
+	font-size: 12px;
+	padding-left: 0.5rem;
+	margin:0;
+	margin-top: 0.1rem;
+	color: inherit;
+	display: inline-block;
+}
+
+.motivationContainer {
+	padding-left: 0.5rem;
+	margin-top: 1rem;
+}
+
+.motivationContainer > .row {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.motivationContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.motivationContainer > .row > h3 {
+	margin-bottom: 0.5rem;
+}
+
+.motivationContainer .row .row {
+	display: flex;
+	margin-bottom: 0.2rem;
+}
+
+.motivationContainer .row .row > h3 {
+	font-size: 12px;
+	line-height: 14px;
+	margin-right: 0.2rem;
+}
+
+.motivationInput {
+	font-size: 12px;
+	line-height: 12px;
+	color: #393939;
+	display: block;
+	flex:1;
+}
+
+.motivationContainer .motivationDescription {
+	 -webkit-flex-direction: column;
+   	flex-direction: column;
+}
+
+.motivationContainer textarea {
+	border:1px solid #D8D8D8;
+	background-color: transparent;
+	width: 100%;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 12px;
+	color: #414141;
+	border-radius: 2px;
+	transition:all 0.2s ease-out;
+	min-height: 0px;
+	padding:0;
+}
+
+.motivationContainer textarea:focus {
+	border:1px solid #8a8384;
+	padding: 3px;
+}
+
+.motivationContainer hr {
+	border-color:#BAB3B3;
+	background-color: #BAB3B3;
+	color:#BAB3B3;
+	margin: 1rem 0;
+}
+
+.addMotivation {
+	color: #393939;
+	cursor: pointer;
+	transition:all 0.3s ease;
+	border-left: 0!important;
+}
+
+.addMotivation:hover {
+	color:#2f4b5f;
+}
+
+.addMotivation:hover .addMotivationButton {
+	background-color:#2f4b5f;
+}
+
+.addMotivationButton {
+	background-color: #3C6783;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	border-radius: 20px;
+	padding-left: 1px;
+	padding-top: 1px;
+	display: inline-block;
+	transition:all 0.3s ease;
+}
+
+.addMotivation p {
 	font-size: 12px;
 	padding-left: 0.5rem;
 	margin:0;

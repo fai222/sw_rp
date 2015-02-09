@@ -173,12 +173,12 @@
             <div class="row">
                 <div class="medium-3 small-6 columns tabsContainer">
                     <div class="container active">
-                        <h2>Skills / Talents</h2>
+                        <h2>Skills & Talents</h2>
                     </div>
                 </div>
                 <div class="medium-3 small-6 columns tabsContainer">
                     <div class="container">
-                        <h2>Gear</h2>
+                        <h2>Gear & Items</h2>
                     </div>
                 </div>
                 <div class="medium-3 small-6 columns tabsContainer">
@@ -669,7 +669,7 @@
 
                 <div class="medium-12 columns container">
                     <div class="row">
-                        <h2>Talents and Special Abilites</h2>
+                        <h2>Talents & Special Abilites</h2>
                     </div>
 
                     <div class="row talentContainer">
@@ -708,9 +708,30 @@
                     </div>
                 </div>
 
-                <div class="medium-12 columns container">
+                <div class="medium-12 columns container gear">
                     <div class="row">
-                        <h2>Gear & Equipment</h2>
+                        <div class="small-12 columns">
+                            <h2>Gear & Items</h2>
+                        </div>
+                    </div>
+
+                    <div class="row gearInfoContainer">
+                        <div class="medium-6 columns creditsContainer">
+                            <h3>Credits:</h3>
+                            <input id="credits" class="creditsInput" type="text"/>
+                        </div>
+                        <div class="medium-6 columns encumbranceContainer">
+                            <h3>
+                                Encumbrance threshold:
+                                <span class="encumbranceThreshold">
+                                    11
+                                </span>
+                                Current: 
+                                <span class="encumbranceCurrent underThreshold">
+                                    7
+                                </span>
+                            </h3>
+                        </div>
                     </div>
 
                     <div class="row">
@@ -719,11 +740,11 @@
                                 <div class="weaponName">
                                     <h3>Weapon</h3>
                                 </div>
-                                <div class="weaponSkill">
-                                    <h3>Skill</h3>
-                                </div>
                                 <div class="weaponPage">
                                     <h3>Page</h3>
+                                </div>
+                                <div class="weaponSkill">
+                                    <h3>Skill</h3>
                                 </div>
                                 <div class="weaponDamage">
                                     <h3>Dmg</h3>
@@ -752,11 +773,11 @@
                                 <div class="weaponName">
                                     <input id="weapon_name" class="weaponInput" type="text"/>
                                 </div>
-                                <div class="weaponSkill">
-                                    <input id="weapon_skill" class="weaponInput" type="text"/>
-                                </div>
                                 <div class="weaponPage">
                                     <input id="weapon_page" class="weaponInput" type="text"/>
+                                </div>
+                                <div class="weaponSkill">
+                                    <input id="weapon_skill" class="weaponInput" type="text"/>
                                 </div>
                                 <div class="weaponDamage">
                                     <input id="weapon_damage" class="weaponInput" type="text"/>
@@ -791,73 +812,198 @@
                     </div>
 
                     <div class="row">
-                        <div class="medium-6 columns armorContainer">
-                            <div class="row header">
-                                <div class="armorName">
-                                    <h3>Name</h3>
+                        <div class="medium-6 small-12 columns armor">
+                            <div class="armorContainer">
+                                <div class="row header">
+                                    <div class="armorName">
+                                        <h3>Armor</h3>
+                                    </div>
+                                    <div class="armorPage">
+                                        <h3>Page</h3>
+                                    </div>
+                                    <div class="armorDefence">
+                                        <h3>Def</h3>
+                                    </div>
+                                    <div class="armorSoak">
+                                        <h3>Soak</h3>
+                                    </div>
+                                    <div class="armorHardpoints">
+                                        <h3>HP</h3>
+                                    </div>
+                                    <div class="armorEncumbrance">
+                                        <h3>Encum</h3>
+                                    </div>
+                                    <div class="armorAttachment">
+                                
+                                    </div>
                                 </div>
-                                <div class="armorPage">
-                                    <h3>Page</h3>
-                                </div>
-                                <div class="armorSummary">
-                                    <h3>Ability Summary</h3>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="armorName">
-                                    <input id="armor_name" class="armorInput" type="text"/>
+                                <div class="row">
+                                    <div class="armorName">
+                                        <input id="armor_name" class="armorInput" type="text"/>
+                                    </div>
+                                    <div class="armorPage">
+                                        <input id="armor_page" class="armorInput" type="text"/>
+                                    </div>
+                                    <div class="armorDefence">
+                                        <input id="armor_defence" class="armorInput" type="text"/>
+                                    </div>
+                                    <div class="armorSoak">
+                                        <input id="armor_soak" class="armorInput" type="text"/>
+                                    </div>
+                                    <div class="armorHardpoints">
+                                        <input id="armor_hardpoints" class="armorInput" type="text"/>
+                                    </div>
+                                    <div class="armorEncumbrance">
+                                        <input id="armor_encumbrance" class="armorInput" type="text"/>
+                                    </div>
+                                    <div class="armorAttachment">
+                                        <img src="img/icon_attachment.png" width="13px" height="auto">
+                                    </div>
                                 </div>
-                                <div class="armorPage">
-                                    <input id="armor_page" class="armorInput" type="text"/>
-                                </div>
-                                <div class="armorSummary">
-                                    <input id="armor_summary" class="armorInput" type="text"/>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="addArmor">
-                                    <div class="addArmorButton">+</div>
-                                    <p>Add Armor</p>
+                                <div class="row">
+                                    <div class="addArmor">
+                                        <div class="addArmorButton">+</div>
+                                        <p>Add Armor</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="medium-6 columns equipmentContainer">
-                            <div class="row header">
-                                <div class="equipmentName">
-                                    <h3>Equipment</h3>
+                        <div class="medium-6 small-12 columns item">
+                            <div class="itemContainer">
+                                <div class="row header">
+                                    <div class="itemName">
+                                        <h3>Item</h3>
+                                    </div>
+                                    <div class="itemPage">
+                                        <h3>Page</h3>
+                                    </div>
+                                    <div class="itemQuantity">
+                                        <h3>Qty</h3>
+                                    </div>
+                                    <div class="itemSummary">
+                                        <h3>Encum</h3>
+                                    </div>
                                 </div>
-                                <div class="equipmentPage">
-                                    <h3>Page</h3>
-                                </div>
-                                <div class="equipmentSummary">
-                                    <h3>Ability Summary</h3>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="equipmentName">
-                                    <input id="equipment_name" class="equipmentInput" type="text"/>
+                                <div class="row">
+                                    <div class="itemName">
+                                        <input id="item_name" class="itemInput" type="text"/>
+                                    </div>
+                                    <div class="itemPage">
+                                        <input id="item_page" class="itemInput" type="text"/>
+                                    </div>
+                                    <div class="itemQuantity">
+                                        <input id="item_page" class="itemInput" type="text"/>
+                                    </div>
+                                    <div class="itemSummary">
+                                        <input id="item_summary" class="itemInput" type="text"/>
+                                    </div>
                                 </div>
-                                <div class="equipmentPage">
-                                    <input id="equipment_page" class="equipmentInput" type="text"/>
-                                </div>
-                                <div class="equipmentSummary">
-                                    <input id="equipment_summary" class="equipmentInput" type="text"/>
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="addEquipment">
-                                    <div class="addEquipmentButton">+</div>
-                                    <p>Add Equipment</p>
+                                <div class="row">
+                                    <div class="addItem">
+                                        <div class="addItemButton">+</div>
+                                        <p>Add Equipment</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="medium-12 columns container backstory">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Backstory</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="medium-8 columns backstoryContainer">
+                            <div class="row">
+                                <h3>Description & Backstory</h3>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+
+                        <div class="medium-4 columns obligationContainer">
+                            <div class="row">
+                                <h3>Obligations</h3>
+                                <div class="row obligationType">
+                                    <h3>Type:</h3>
+                                    <input id="obligation_type" name="obligation_type" class="obligationInput" type="text"/>
+                                </div>
+                                <div class="row obligationPage">
+                                    <h3>Page:</h3>
+                                    <input id="obligation_page" name="obligation_page" class="obligationInput" type="text"/>
+                                </div>
+                                <div class="row obligationMagnitude">
+                                    <h3>Magnitude:</h3>
+                                    <input id="obligation_magnitude" name="obligation_magnitude" class="obligationInput" type="text"/>
+                                </div>
+                                <div class="row obligationDescription">
+                                    <h3>Description:</h3>
+                                    <textarea id="obligation_description"></textarea>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="addObligation">
+                                        <div class="addObligationButton">+</div>
+                                        <p>Add Obligation</p>
+                                    </div>
+                                </div>
+                                <!--<hr>
+                                <div class="row obligationType">
+                                    <h3>Type:</h3>
+                                    <input id="obligation_type" name="obligation_type" class="obligationInput" type="text"/>
+                                </div>
+                                <div class="row obligationPage">
+                                    <h3>Page:</h3>
+                                    <input id="obligation_page" name="obligation_page" class="obligationInput" type="text"/>
+                                </div>
+                                <div class="row obligationMagnitude">
+                                    <h3>Magnitude:</h3>
+                                    <input id="obligation_magnitude" name="obligation_magnitude" class="obligationInput" type="text"/>
+                                </div>
+                                <div class="row obligationDescription">
+                                    <h3>Description:</h3>
+                                    <textarea id="obligation_description"></textarea>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="medium-4 columns motivationContainer">
+                            <div class="row">
+                                <h3>Motivations</h3>
+                                <div class="row motivationType">
+                                    <h3>Type:</h3>
+                                    <input id="motivation_type" name="motivation_type" class="motivationInput" type="text"/>
+                                </div>
+                                <div class="row motivationDescription">
+                                    <h3>Description:</h3>
+                                    <textarea id="motivation_description"></textarea>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="addMotivation">
+                                        <div class="addMotivationButton">+</div>
+                                        <p>Add Motivation</p>
+                                    </div>
+                                </div>
+                                <!--<hr>
+                                <div class="row motivationType">
+                                    <h3>Type:</h3>
+                                    <input id="motivation_type" name="motivation_type" class="motivationInput" type="text"/>
+                                </div>
+                                <div class="row motivationDescription">
+                                    <h3>Description:</h3>
+                                    <textarea id="motivation_description"></textarea>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 
