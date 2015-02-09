@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    session_regenerate_id();
+    if($_SESSION['logedin'] !== true) {
+        header("Location: login.php");
+    }
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
