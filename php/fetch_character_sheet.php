@@ -36,6 +36,12 @@
 	        $obligations = $query->fetchAll(PDO::FETCH_ASSOC);
 	        $query = null;
 
+	        $query = $db->prepare("SELECT * FROM motivations WHERE character_id = :character_id");
+	        $query->bindParam(":character_id", $character_id);
+	        $query->execute();
+	        $motivations = $query->fetchAll(PDO::FETCH_ASSOC);
+	        $query = null;
+
 	        $query = $db->prepare("SELECT * FROM talents WHERE character_id = :character_id");
 	        $query->bindParam(":character_id", $character_id);
 	        $query->execute();
@@ -48,7 +54,13 @@
 	        $weapons = $query->fetchAll(PDO::FETCH_ASSOC);
 	        $query = null;
 
-	        $character_sheet = array('character_sheet_data' => $character_sheet_data, 'armor' => $armor, 'critical_injuries' => $critical_injuries, 'equipment' => $equipment, 'obligations' => $obligations, 'talents' => $talents, 'weapons' => $weapons);
+	        $query = $db->prepare("SELECT * FROM descriptions WHERE character_id = :character_id");
+	        $query->bindParam(":character_id", $character_id);
+	        $query->execute();
+	        $descriptions = $query->fetchAll(PDO::FETCH_ASSOC);
+	        $query = null;
+
+	        $character_sheet = array('character_sheet_data' => $character_sheet_data, 'armor' => $armor, 'critical_injuries' => $critical_injuries, 'equipment' => $equipment, 'obligations' => $obligations, 'motivations' => $motivations, 'talents' => $talents, 'weapons' => $weapons, 'descriptions' => $descriptions);
 	        echo json_encode($character_sheet);
 	        
     	} catch(PDOException $e) {

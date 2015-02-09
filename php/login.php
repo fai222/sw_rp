@@ -26,6 +26,7 @@ include 'connect.php';
         $_SESSION['userid'] = $id;
         
         echo "Logged in!";
+        header("Location: ../index.php");
 	}
 
 	try {

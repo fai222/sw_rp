@@ -2,7 +2,7 @@
     session_start();
     session_regenerate_id();
     if($_SESSION['logedin'] !== true) {
-        header("Location: login.php");
+        header("Location: php/login.php");
     }
 ?>
 
@@ -694,15 +694,18 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="talentName">
-                                    <input id="talent_name" class="talentInput" type="text"/>
-                                </div>
-                                <div class="talentPage">
-                                    <input id="talent_page" class="talentInput" type="text"/>
-                                </div>
-                                <div class="talentSummary">
-                                    <input id="talent_summary" class="talentInput" type="text"/>
+                            <div class="talentRowContainer">
+                                <div class="row talentRow">
+                                    <input type="hidden" id="talent_id" readonly/>
+                                    <div class="talentName">
+                                        <input id="talent_name" class="talentInput" type="text"/>
+                                    </div>
+                                    <div class="talentPage">
+                                        <input id="talent_page" class="talentInput" type="text"/>
+                                    </div>
+                                    <div class="talentSummary">
+                                        <input id="talent_summary" class="talentInput" type="text"/>
+                                    </div>
                                 </div>
                             </div>
 
@@ -933,7 +936,7 @@
                         <div class="medium-8 columns backstoryContainer">
                             <div class="row">
                                 <h3>Description & Backstory</h3>
-                                <textarea></textarea>
+                                <textarea id="description_text"></textarea>
                             </div>
                         </div>
 
