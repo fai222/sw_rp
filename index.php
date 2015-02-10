@@ -747,7 +747,7 @@
 
                     <div class="row">
                         <div class="medium-12 columns weaponContainer">
-                            <div class="row header">
+                            <div class="row header weaponRow">
                                 <div class="weaponName">
                                     <h3>Weapon</h3>
                                 </div>
@@ -780,36 +780,38 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="weaponName">
-                                    <input id="weapon_name" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponPage">
-                                    <input id="weapon_page" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponSkill">
-                                    <input id="weapon_skill" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponDamage">
-                                    <input id="weapon_damage" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponCritical">
-                                    <input id="weapon_critical" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponRange">
-                                    <input id="weapon_range" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponHardpoints">
-                                    <input id="weapon_hardpoints" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponEncumbrance">
-                                    <input id="weapon_encumbrance" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponSpecial">
-                                    <input id="weapon_special" class="weaponInput" type="text"/>
-                                </div>
-                                <div class="weaponAttachment">
-                                    <img src="img/icon_attachment.png" width="13px" height="auto">
+                            <div class="weaponRowContainer">
+                                <div class="row weaponRow">
+                                    <div class="weaponName">
+                                        <input id="weapon_name" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponPage">
+                                        <input id="weapon_page" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponSkill">
+                                        <input id="weapon_skill" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponDamage">
+                                        <input id="weapon_damage" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponCritical">
+                                        <input id="weapon_critical" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponRange">
+                                        <input id="weapon_range" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponHardpoints">
+                                        <input id="weapon_hardpoints" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponEncumbrance">
+                                        <input id="weapon_encumbrance" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponSpecial">
+                                        <input id="weapon_special" class="weaponInput" type="text"/>
+                                    </div>
+                                    <div class="weaponAttachment">
+                                        <img src="img/icon_attachment.png" width="13px" height="auto">
+                                    </div>
                                 </div>
                             </div>
 
@@ -849,27 +851,29 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="armorName">
-                                        <input id="armor_name" class="armorInput" type="text"/>
-                                    </div>
-                                    <div class="armorPage">
-                                        <input id="armor_page" class="armorInput" type="text"/>
-                                    </div>
-                                    <div class="armorDefence">
-                                        <input id="armor_defence" class="armorInput" type="text"/>
-                                    </div>
-                                    <div class="armorSoak">
-                                        <input id="armor_soak" class="armorInput" type="text"/>
-                                    </div>
-                                    <div class="armorHardpoints">
-                                        <input id="armor_hardpoints" class="armorInput" type="text"/>
-                                    </div>
-                                    <div class="armorEncumbrance">
-                                        <input id="armor_encumbrance" class="armorInput" type="text"/>
-                                    </div>
-                                    <div class="armorAttachment">
-                                        <img src="img/icon_attachment.png" width="13px" height="auto">
+                                <div class="armorRowContainer">
+                                    <div class="row armorRow">
+                                        <div class="armorName">
+                                            <input id="armor_name" class="armorInput" type="text"/>
+                                        </div>
+                                        <div class="armorPage">
+                                            <input id="armor_page" class="armorInput" type="text"/>
+                                        </div>
+                                        <div class="armorDefence">
+                                            <input id="armor_defence" class="armorInput" type="text"/>
+                                        </div>
+                                        <div class="armorSoak">
+                                            <input id="armor_soak" class="armorInput" type="text"/>
+                                        </div>
+                                        <div class="armorHardpoints">
+                                            <input id="armor_hardpoints" class="armorInput" type="text"/>
+                                        </div>
+                                        <div class="armorEncumbrance">
+                                            <input id="armor_encumbrance" class="armorInput" type="text"/>
+                                        </div>
+                                        <div class="armorAttachment">
+                                            <img src="img/icon_attachment.png" width="13px" height="auto">
+                                        </div>
                                     </div>
                                 </div>
 
@@ -899,25 +903,27 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="itemName">
-                                        <input id="item_name" class="itemInput" type="text"/>
-                                    </div>
-                                    <div class="itemPage">
-                                        <input id="item_page" class="itemInput" type="text"/>
-                                    </div>
-                                    <div class="itemQuantity">
-                                        <input id="item_page" class="itemInput" type="text"/>
-                                    </div>
-                                    <div class="itemSummary">
-                                        <input id="item_summary" class="itemInput" type="text"/>
+                                <div class="itemRowContainer">
+                                    <div class="row itemRow">
+                                        <div class="itemName">
+                                            <input id="item_name" class="itemInput" type="text"/>
+                                        </div>
+                                        <div class="itemPage">
+                                            <input id="item_page" class="itemInput" type="text"/>
+                                        </div>
+                                        <div class="itemQuantity">
+                                            <input id="item_page" class="itemInput" type="text"/>
+                                        </div>
+                                        <div class="itemSummary">
+                                            <input id="item_summary" class="itemInput" type="text"/>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="addItem">
                                         <div class="addItemButton">+</div>
-                                        <p>Add Equipment</p>
+                                        <p>Add Item</p>
                                     </div>
                                 </div>
                             </div>

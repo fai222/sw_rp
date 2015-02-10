@@ -16,12 +16,12 @@
 
     		$tables = array(
     			'armor',
-    			'critical_injuries',
-    			'equipment', 'obligations',
-    			'motivations',
-    			'talents',
-    			'weapons',
-    			'descriptions'
+    			'item',
+    			'obligation',
+    			'motivation',
+    			'talent',
+    			'weapon',
+    			'description'
     		);
 
     		foreach($tables as $table) {
