@@ -1201,7 +1201,7 @@ textarea:focus {
 /*----------BACKSTORY----------*/
 
 .backstoryContainer {
-	padding-right: 0.5rem;
+	padding-right: 1rem;
 }
 
 @media only screen and (max-width: 64em) { 
@@ -1216,12 +1216,13 @@ textarea:focus {
 	padding: 1rem;
 }
 
-.backstoryContainer h3 {
-	font-size: 24px;
+.backstoryContainer h2 {
+	font-size: 20px;
 	font-weight: bold;
 	color: #393939;
 	margin: 0;
 	line-height: 24px;
+	text-transform: capitalize;
 }
 
 .backstoryContainer textarea {

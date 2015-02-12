@@ -976,7 +976,7 @@
                     <div class="row">
                         <div data-section="description" class="large-8 medium-12 columns backstoryContainer">
                             <div class="row">
-                                <h3>Description & Backstory</h3>
+                                <h2>Description & Backstory</h2>
                                 <textarea id="description_text" data-entry="text"></textarea>
                             </div>
                         </div>
