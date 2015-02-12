@@ -207,7 +207,7 @@
                         <h2>Skills</h2>
                     </div>
 
-                    <div class="row skillContainer">
+                    <div class="row skillContainer" data-section="character_basic">
                         <div class="medium-6 columns skillGeneral">
                             <div class="row header">
                                 <div class="skillName"><h3>General Skills</h3></div>
@@ -218,8 +218,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Astrogation (Int)</p></div>
                                 <div class="skillCareer">
-                                    <input id="astrogation_career" class="skillCareerInput" type="text"/>
+                                    <input id="astrogation_career" data-entry="astrogation_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="astrogation" readonly/>
                                 <div class="skillRankContainer" id="astrogation">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -232,8 +233,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Athletics (Br)</p></div>
                                 <div class="skillCareer">
-                                    <input id="athletics_career" class="skillCareerInput" type="text"/>
+                                    <input id="athletics_career" data-entry="athletics_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="athletics" readonly/>
                                 <div class="skillRankContainer" id="athletics">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -246,8 +248,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Charm (Pr)</p></div>
                                 <div class="skillCareer">
-                                    <input id="charm_career" class="skillCareerInput" type="text"/>
+                                    <input id="charm_career" data-entry="charm_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="charm" readonly/>
                                 <div class="skillRankContainer" id="charm">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -260,8 +263,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Coercion (Will)</p></div>
                                 <div class="skillCareer">
-                                    <input id="coercion_career" class="skillCareerInput" type="text"/>
+                                    <input id="coercion_career" data-entry="coercion_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="coercion" readonly/>
                                 <div class="skillRankContainer" id="coercion">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -274,8 +278,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Computers (Int)</p></div>
                                 <div class="skillCareer">
-                                    <input id="computers_career" class="skillCareerInput" type="text"/>
+                                    <input id="computers_career" data-entry="computers_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="computers" readonly/>
                                 <div class="skillRankContainer" id="computers">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -288,8 +293,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Cool (Per)</p></div>
                                 <div class="skillCareer">
-                                    <input id="cool_career" class="skillCareerInput" type="text"/>
+                                    <input id="cool_career" data-entry="cool_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="cool" readonly/>
                                 <div class="skillRankContainer" id="cool">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -302,8 +308,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Coordination (Ag)</p></div>
                                 <div class="skillCareer">
-                                    <input id="coordination_career" class="skillCareerInput" type="text"/>
+                                    <input id="coordination_career" data-entry="coordination_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="coordination" readonly/>
                                 <div class="skillRankContainer" id="coordination">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -315,8 +322,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Deception (Cun)</p></div>
                                 <div class="skillCareer">
-                                    <input id="deception_career" class="skillCareerInput" type="text"/>
+                                    <input id="deception_career" data-entry="deception_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="deception" readonly/>
                                 <div class="skillRankContainer" id="deception">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -328,8 +336,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Discipline (Will)</p></div>
                                 <div class="skillCareer">
-                                    <input id="discipline_career" class="skillCareerInput" type="text"/>
+                                    <input id="discipline_career" data-entry="discipline_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="discipline" readonly/>
                                 <div class="skillRankContainer" id="discipline">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -341,8 +350,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Leadership (Pr)</p></div>
                                 <div class="skillCareer">
-                                    <input id="leadership_career" class="skillCareerInput" type="text"/>
+                                    <input id="leadership_career" data-entry="leadership_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="leadership" readonly/>
                                 <div class="skillRankContainer" id="leadership">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -354,8 +364,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Mechanics (Int)</p></div>
                                 <div class="skillCareer">
-                                    <input id="mechanics_career" class="skillCareerInput" type="text"/>
+                                    <input id="mechanics_career" data-entry="mechanics_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="mechanics" readonly/>
                                 <div class="skillRankContainer" id="mechanics">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -367,8 +378,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Medicine (Int)</p></div>
                                 <div class="skillCareer">
-                                    <input id="medicine_career" class="skillCareerInput" type="text"/>
+                                    <input id="medicine_career" data-entry="medicine_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="medicine" readonly/>
                                 <div class="skillRankContainer" id="medicine">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -380,8 +392,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Negotiation (Pr)</p></div>
                                 <div class="skillCareer">
-                                    <input id="negotiation_career" class="skillCareerInput" type="text"/>
+                                    <input id="negotiation_career" data-entry="negotiation_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="negotiation" readonly/>
                                 <div class="skillRankContainer" id="negotiation">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -393,8 +406,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Perception (Cun)</p></div>
                                 <div class="skillCareer">
-                                    <input id="perception_career" class="skillCareerInput" type="text"/>
+                                    <input id="perception_career" data-entry="perception_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="perception" readonly/>
                                 <div class="skillRankContainer" id="perception">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -406,8 +420,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Piloting - Planetary (Ag)</p></div>
                                 <div class="skillCareer">
-                                    <input id="piloting_planetary_career" class="skillCareerInput" type="text"/>
+                                    <input id="piloting_planetary_career" data-entry="piloting_planetary_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="piloting_planetary" readonly/>
                                 <div class="skillRankContainer" id="piloting_planetary">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -419,8 +434,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Piloting - Space (Ag)</p></div>
                                 <div class="skillCareer">
-                                    <input id="piloting_space_career" class="skillCareerInput" type="text"/>
+                                    <input id="piloting_space_career" data-entry="piloting_space_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="piloting_space" readonly/>
                                 <div class="skillRankContainer" id="piloting_space">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -432,8 +448,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Resilience (Br)</p></div>
                                 <div class="skillCareer">
-                                    <input id="resilience_career" class="skillCareerInput" type="text"/>
+                                    <input id="resilience_career" data-entry="resilience_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="resilience" readonly/>
                                 <div class="skillRankContainer" id="resilience">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -445,8 +462,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Skulduggery (Cun)</p></div>
                                 <div class="skillCareer">
-                                    <input id="skulduggery_career" class="skillCareerInput" type="text"/>
+                                    <input id="skulduggery_career" data-entry="skulduggery_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="skulduggery" readonly/>
                                 <div class="skillRankContainer" id="skulduggery">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -458,8 +476,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Stealth (Ag)</p></div>
                                 <div class="skillCareer">
-                                    <input id="stealth_career" class="skillCareerInput" type="text"/>
+                                    <input id="stealth_career" data-entry="stealth_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="stealth" readonly/>
                                 <div class="skillRankContainer" id="stealth">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -471,8 +490,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Streetwise (Cun)</p></div>
                                 <div class="skillCareer">
-                                    <input id="streetwise_career" class="skillCareerInput" type="text"/>
+                                    <input id="streetwise_career" data-entry="streetwise_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="streetwise" readonly/>
                                 <div class="skillRankContainer" id="streetwise">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -484,8 +504,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Survival (Ag)</p></div>
                                 <div class="skillCareer">
-                                    <input id="survival_career" class="skillCareerInput" type="text"/>
+                                    <input id="survival_career" data-entry="survival_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="survival" readonly/>
                                 <div class="skillRankContainer" id="survival">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -497,8 +518,9 @@
                             <div class="row">
                                 <div class="skillName"><p>Vigilance (Will)</p></div>
                                 <div class="skillCareer">
-                                    <input id="vigilance_career" class="skillCareerInput" type="text"/>
+                                    <input id="vigilance_career" data-entry="vigilance_career" class="skillCareerInput" type="text"/>
                                 </div>
+                                <input type="hidden" data-entry="vigilance" readonly/>
                                 <div class="skillRankContainer" id="vigilance">
                                     <div class="skillRank one"></div>
                                     <div class="skillRank two"></div>
@@ -519,8 +541,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Brawl (Br)</p></div>
                                         <div class="skillCareer">
-                                            <input id="brawl_career" class="skillCareerInput" type="text"/>
+                                            <input id="brawl_career" data-entry="brawl_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="brawl" readonly/>
                                         <div class="skillRankContainer" id="brawl">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -532,8 +555,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Gunnery (Ag)</p></div>
                                         <div class="skillCareer">
-                                            <input id="gunnery_career" class="skillCareerInput" type="text"/>
+                                            <input id="gunnery_career" data-entry="gunnery_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="gunnery" readonly/>
                                         <div class="skillRankContainer" id="gunnery">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -545,8 +569,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Melee (Br)</p></div>
                                         <div class="skillCareer">
-                                            <input id="melee_career" class="skillCareerInput" type="text"/>
+                                            <input id="melee_career" data-entry="melee_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="melee" readonly/>
                                         <div class="skillRankContainer" id="melee">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -558,8 +583,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Ranged - Light (Ag)</p></div>
                                         <div class="skillCareer">
-                                            <input id="ranged_light_career" class="skillCareerInput" type="text"/>
+                                            <input id="ranged_light_career" data-entry="ranged_light_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="ranged_light" readonly/>
                                         <div class="skillRankContainer" id="ranged_light">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -571,8 +597,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Ranged - Heavy (Ag)</p></div>
                                         <div class="skillCareer">
-                                            <input id="ranged_heavy_career" class="skillCareerInput" type="text"/>
+                                            <input id="ranged_heavy_career" data-entry="ranged_heavy_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="ranged_heavy" readonly/>
                                         <div class="skillRankContainer" id="ranged_heavy">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -594,8 +621,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Core Worlds (Int)</p></div>
                                         <div class="skillCareer">
-                                            <input id="core_worlds_career" class="skillCareerInput" type="text"/>
+                                            <input id="core_worlds_career" data-entry="core_worlds_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="core_worlds" readonly/>
                                         <div class="skillRankContainer" id="core_worlds">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -607,8 +635,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Education (Int)</p></div>
                                         <div class="skillCareer">
-                                            <input id="education_career" class="skillCareerInput" type="text"/>
+                                            <input id="education_career" data-entry="education_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="education" readonly/>
                                         <div class="skillRankContainer" id="education">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -620,8 +649,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Lore (Int)</p></div>
                                         <div class="skillCareer">
-                                            <input id="lore_career" class="skillCareerInput" type="text"/>
+                                            <input id="lore_career" data-entry="lore_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="lore" readonly/>
                                         <div class="skillRankContainer" id="lore">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -633,8 +663,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Outer Rim (Int)</p></div>
                                         <div class="skillCareer">
-                                            <input id="outer_rim_career" class="skillCareerInput" type="text"/>
+                                            <input id="outer_rim_career" data-entry="outer_rim_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="outer_rim" readonly/>
                                         <div class="skillRankContainer" id="outer_rim">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -646,8 +677,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Underworld (Int)</p></div>
                                         <div class="skillCareer">
-                                            <input id="underworld_career" class="skillCareerInput" type="text"/>
+                                            <input id="underworld_career" data-entry="underworld_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="underworld" readonly/>
                                         <div class="skillRankContainer" id="underworld">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -659,8 +691,9 @@
                                     <div class="row">
                                         <div class="skillName"><p>Xenology (Int)</p></div>
                                         <div class="skillCareer">
-                                            <input id="xenology_career" class="skillCareerInput" type="text"/>
+                                            <input id="xenology_career" data-entry="xenology_career" class="skillCareerInput" type="text"/>
                                         </div>
+                                        <input type="hidden" data-entry="xenology" readonly/>
                                         <div class="skillRankContainer" id="xenology">
                                             <div class="skillRank one"></div>
                                             <div class="skillRank two"></div>
@@ -946,79 +979,57 @@
                             </div>
                         </div>
 
-                        <div class="medium-4 columns obligationContainer">
-                            <div class="row">
-                                <h3>Obligations</h3>
-                                <div class="row obligationType">
-                                    <h3>Type:</h3>
-                                    <input id="obligation_type" name="obligation_type" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationPage">
-                                    <h3>Page:</h3>
-                                    <input id="obligation_page" name="obligation_page" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationMagnitude">
-                                    <h3>Magnitude:</h3>
-                                    <input id="obligation_magnitude" name="obligation_magnitude" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationDescription">
-                                    <h3>Description:</h3>
-                                    <textarea id="obligation_description"></textarea>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="addObligation">
-                                        <div class="addObligationButton">+</div>
-                                        <p>Add Obligation</p>
+                        <div class="medium-4 columns obligationContainer" data-section="obligation">
+                            <h3>Obligations</h3>
+                            <div class="obligationRowContainer">
+                                <div class="row obligationRow" data-row="">
+                                    <div class="row obligationType">
+                                        <h3>Type:</h3>
+                                        <input id="obligation_type" data-entry="type" name="obligation_type" class="obligationInput" type="text"/>
                                     </div>
+                                    <div class="row obligationPage">
+                                        <h3>Page:</h3>
+                                        <input id="obligation_page" data-entry="page" name="obligation_page" class="obligationInput" type="text"/>
+                                    </div>
+                                    <div class="row obligationMagnitude">
+                                        <h3>Magnitude:</h3>
+                                        <input id="obligation_magnitude" data-entry="magnitude" name="obligation_magnitude" class="obligationInput" type="text"/>
+                                    </div>
+                                    <div class="row obligationDescription">
+                                        <h3>Description:</h3>
+                                        <textarea id="obligation_description" data-entry="description"></textarea>
+                                    </div>
+                                    <hr>
                                 </div>
-                                <!--<hr>
-                                <div class="row obligationType">
-                                    <h3>Type:</h3>
-                                    <input id="obligation_type" name="obligation_type" class="obligationInput" type="text"/>
+                            </div>
+                            <div class="row">
+                                <div class="addObligation">
+                                    <div class="addObligationButton">+</div>
+                                    <p>Add Obligation</p>
                                 </div>
-                                <div class="row obligationPage">
-                                    <h3>Page:</h3>
-                                    <input id="obligation_page" name="obligation_page" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationMagnitude">
-                                    <h3>Magnitude:</h3>
-                                    <input id="obligation_magnitude" name="obligation_magnitude" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationDescription">
-                                    <h3>Description:</h3>
-                                    <textarea id="obligation_description"></textarea>
-                                </div>-->
                             </div>
                         </div>
                         <div class="medium-4 columns motivationContainer">
+                            <h3>Motivations</h3>
+                            <div class="motivationRowContainer">
+                                <div class="row motivationRow" data-row="">
+                                    <div class="row motivationType">
+                                        <h3>Type:</h3>
+                                        <input id="motivation_type" data-entry="type" name="motivation_type" class="motivationInput" type="text"/>
+                                    </div>
+                                    <div class="row motivationDescription">
+                                        <h3>Description:</h3>
+                                        <textarea id="motivation_description" data-entry="description"></textarea>
+                                    </div>
+                                    <hr/>
+                                </div>
+                            </div>
                             <div class="row">
-                                <h3>Motivations</h3>
-                                <div class="row motivationType">
-                                    <h3>Type:</h3>
-                                    <input id="motivation_type" name="motivation_type" class="motivationInput" type="text"/>
-                                </div>
-                                <div class="row motivationDescription">
-                                    <h3>Description:</h3>
-                                    <textarea id="motivation_description"></textarea>
-                                </div>
-                                <hr/>
-                                <div class="row">
                                     <div class="addMotivation">
                                         <div class="addMotivationButton">+</div>
                                         <p>Add Motivation</p>
                                     </div>
                                 </div>
-                                <!--<hr>
-                                <div class="row motivationType">
-                                    <h3>Type:</h3>
-                                    <input id="motivation_type" name="motivation_type" class="motivationInput" type="text"/>
-                                </div>
-                                <div class="row motivationDescription">
-                                    <h3>Description:</h3>
-                                    <textarea id="motivation_description"></textarea>
-                                </div>-->
-                            </div>
                         </div>
                     </div>
             </div>
