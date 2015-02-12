@@ -661,7 +661,7 @@ textarea:focus {
 }
 
 .skillRank:hover {
-	background-color: #ababab;
+	background-color: rgba(132, 204, 87, 0.5);
 
 }
 
@@ -676,6 +676,10 @@ textarea:focus {
 
 .skillRank.ranked {
 	background-color: #84CC57;
+}
+
+.skillRank.ranked:hover {
+	background-color: rgba(221, 192, 69, 0.5);
 }
 
 .skillRank.trained {
