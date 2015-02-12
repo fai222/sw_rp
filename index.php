@@ -71,7 +71,7 @@
                     <img src="img/avatar.jpg" width="100%" height="auto">
                 </div>
             </div>
-
+            
             <div class="row attributesContainer">
                 <div class="medium-3 small-6 columns">
                     <div class="container">
@@ -674,7 +674,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="medium-12 columns container">
                     <div class="row">
                         <h2>Talents & Special Abilites</h2>
