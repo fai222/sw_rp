@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 
+ul {
+	list-style-type: none;
+}
+
 @media only screen and (max-width: 40em) {
 	.show-for-small {
 		display:block;
@@ -469,18 +473,6 @@ textarea:focus {
 	margin-top: 0.6rem;
 }
 
-.tabsContainer {
-	padding: 0 0.5rem;
-}
-
-.tabsContainer:first-child {
-	padding-left: 0;
-}
-
-.tabsContainer:last-child {
-	padding-right: 0;
-}
-
 @media only screen and (max-width: 40em) {
 	.tabsContainer:nth-child(2) {
 		padding-right: 0;
@@ -491,21 +483,33 @@ textarea:focus {
 	}
 }
 
-.tabsContainer .container {
-	padding: 1rem;
-	cursor: pointer;
+.tabs-content > .content {
+	padding: 0;
+}
+
+.tabsContainer {
+	background-color: #302E2F;
 	transition:all 0.3s ease;
+	margin-top: 1rem;
+	outline: none;
 }
 
-.tabsContainer .container:hover {
+.tabsContainer a {
+	width: 100%;
+	height: 100%;
+	padding:0.5rem;
+	outline: none;
+}
+
+.tabsContainer:hover {
 	background-color: #302F2F;
 }
 
-.tabsContainer .container.active {
+.tabsContainer.active {
 	background-color: #302F2F;
 }
 
-.tabsContainer .container:after {
+.tabsContainer:after {
 	content: "";
 	width: 100px;
 	height: 4px;
@@ -520,21 +524,21 @@ textarea:focus {
     transition:all 0.4s ease;
 }
 
-.tabsContainer .container:hover:after {
+.tabsContainer:hover:after {
 	content: "";
 	bottom: 0px;
     left: 50%;
     transform:translateX(-50%);
 }
 
-.tabsContainer .container.active:after {
+.tabsContainer.active:after {
 	content: "";
 	bottom: 0px;
     left: 50%;
     transform:translateX(-50%);
 }
 
-.tabsContainer .container h2 {
+.tabsContainer h2 {
 	color: #919191;
 	font-size:15px;
 	text-align: center;
@@ -790,7 +794,11 @@ textarea:focus {
 
 /*-----------GEAR & EQUIPMENT-----------*/
 
-.row.gearInfoContainer {
+.gear {
+	padding: 2rem;
+}
+
+.gearInfoContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
 	padding: 1rem;
@@ -1199,6 +1207,10 @@ textarea:focus {
 }
 
 /*----------BACKSTORY----------*/
+
+.backstory {
+	padding: 2rem;
+}
 
 .backstoryContainer {
 	padding-right: 1rem;

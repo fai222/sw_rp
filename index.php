@@ -178,31 +178,23 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="medium-3 small-6 columns tabsContainer">
-                    <div class="container active">
-                        <h2>Skills & Talents</h2>
-                    </div>
-                </div>
-                <div class="medium-3 small-6 columns tabsContainer">
-                    <div class="container">
-                        <h2>Gear & Items</h2>
-                    </div>
-                </div>
-                <div class="medium-3 small-6 columns tabsContainer">
-                    <div class="container">
-                        <h2>Backstory</h2>
-                    </div>
-                </div>
-                <div class="medium-3 small-6 columns tabsContainer">
-                    <div class="container">
-                        <h2>Notes</h2>
-                    </div>
-                </div>
-            </div>
+            <ul class="row" data-tab>
+                <li class="medium-3 small-6 columns tabsContainer active">
+                   <a href="#skill_talent"><h2>Skills & Talents</h2></a>
+                </li>
+                <li class="medium-3 small-6 columns tabsContainer">
+                   <a href="#gear"><h2>Gear & Items</h2></a>
+                </li>
+                <li class="medium-3 small-6 columns tabsContainer">
+                   <a href="#backstory"><h2>Backstory</h2></a>
+                </li>
+                <li class="medium-3 small-6 columns tabsContainer">
+                   <a href="#notes"><h2>Notes</h2></a>
+                </li>
+            </ul>
 
-            <div class="row tabContent">
-                <div class="skill_talent">
+            <div class="row tabs-content">
+                <div class="content active" id="skill_talent">
                     <div class="medium-12 columns container skill">
                         <div class="row">
                             <h2>Skills</h2>
@@ -753,8 +745,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="medium-12 columns container gear">
+                <div class="content" id="gear">
+                    <div class="medium-12 columns container gear" id="gear">
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Gear & Items</h2>
@@ -965,8 +957,9 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="medium-12 columns container backstory">
+                </div>
+                <div class="content" id="backstory">
+                    <div class="medium-12 columns container backstory" id="backstory">
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Backstory</h2>
@@ -1027,13 +1020,18 @@
                                 </div>
                             </div>
                             <div class="row">
-                                    <div class="addMotivation">
-                                        <div class="addMotivationButton">+</div>
-                                        <p>Add Motivation</p>
-                                    </div>
+                                <div class="addMotivation">
+                                    <div class="addMotivationButton">+</div>
+                                    <p>Add Motivation</p>
                                 </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                </div>
+                <div class="content" id="notes">
+                    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+                </div>
             </div>
         </div>
 
