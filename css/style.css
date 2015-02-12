@@ -965,6 +965,12 @@ textarea:focus {
 	padding-right: 0.5rem;
 }
 
+@media only screen and (max-width: 64em) { 
+	.armor {
+		padding:0;
+	}
+}
+
 .armorContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
@@ -1076,6 +1082,13 @@ textarea:focus {
 	padding-left: 0.5rem;
 }
 
+@media only screen and (max-width: 64em) { 
+	.item {
+		padding:0;
+		margin-top: 1rem;
+	}
+}
+
 .itemContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
@@ -1183,6 +1196,12 @@ textarea:focus {
 	padding-right: 0.5rem;
 }
 
+@media only screen and (max-width: 64em) { 
+	.backstoryContainer {
+		padding:0;
+	}
+}
+
 .backstoryContainer > .row {
 	background-color: #D8D8D8;
 	border-radius: 3px;
@@ -1190,11 +1209,11 @@ textarea:focus {
 }
 
 .backstoryContainer h3 {
-	font-size: 14px;
+	font-size: 24px;
 	font-weight: bold;
 	color: #393939;
 	margin: 0;
-	line-height: 14px;
+	line-height: 24px;
 }
 
 .backstoryContainer textarea {
@@ -1202,12 +1221,15 @@ textarea:focus {
 	background-color: transparent;
 	width: 100%;
 	font-family: 'Droid Sans', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 16px;
 	color: #414141;
 	margin-top: 0.5rem;
 	border-radius: 2px;
 	transition:all 0.3s ease-out;
 	padding: 0;
+	resize: none;
+	min-height: 400px;
 }
 
 .backstoryContainer textarea:focus {
@@ -1217,6 +1239,22 @@ textarea:focus {
 
 .obligationContainer {
 	padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 64em) { 
+	.obligationContainer {
+		padding-left: 0;
+		padding-right: 0.5rem;
+		margin-top: 1rem;
+	}
+}
+
+@media only screen and (max-width: 40em) { 
+	.obligationContainer {
+		padding-left: 0;
+		padding-right: 0rem;
+		margin-top: 1rem;
+	}
 }
 
 .obligationContainer > .row {
@@ -1272,6 +1310,7 @@ textarea:focus {
 	transition:all 0.2s ease-out;
 	min-height: 0px;
 	padding:0;
+	resize: none;
 }
 
 .obligationContainer textarea:focus {
@@ -1330,6 +1369,14 @@ textarea:focus {
 	margin-top: 1rem;
 }
 
+@media only screen and (max-width: 40em) { 
+	.motivationContainer {
+		padding-left: 0rem;
+		margin-top: 1rem;
+	}
+}
+
+
 .motivationContainer > .row {
 	background-color: #D8D8D8;
 	border-radius: 3px;
@@ -1383,6 +1430,7 @@ textarea:focus {
 	transition:all 0.2s ease-out;
 	min-height: 0px;
 	padding:0;
+	resize: none;
 }
 
 .motivationContainer textarea:focus {

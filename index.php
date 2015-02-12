@@ -178,7 +178,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <ul class="row">
                 <div class="medium-3 small-6 columns tabsContainer">
                     <div class="container active">
                         <h2>Skills & Talents</h2>
@@ -199,9 +199,10 @@
                         <h2>Notes</h2>
                     </div>
                 </div>
-            </div>
+            </ul>
 
             <div class="row tabContent">
+                <div class="skill_talent">
                 <div class="medium-12 columns container">
                     <div class="row">
                         <h2>Skills</h2>
@@ -718,6 +719,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
 
                 <div class="medium-12 columns container gear">
                     <div class="row">
@@ -825,7 +827,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="medium-6 small-12 columns armor">
+                        <div class="large-6 medium-12 small-12 columns armor">
                             <div class="armorContainer">
                                 <div class="row header">
                                     <div class="armorName">
@@ -886,7 +888,7 @@
                             </div>
                         </div>
 
-                        <div class="medium-6 small-12 columns item">
+                        <div class="large-6 medium-12 small-12 columns item">
                             <div class="itemContainer">
                                 <div class="row header">
                                     <div class="itemName">
@@ -939,14 +941,14 @@
                     </div>
 
                     <div class="row">
-                        <div data-section="description" class="medium-8 columns backstoryContainer">
+                        <div data-section="description" class="large-8 medium-12 columns backstoryContainer">
                             <div class="row">
                                 <h3>Description & Backstory</h3>
                                 <textarea id="description_text" data-entry="text"></textarea>
                             </div>
                         </div>
 
-                        <div class="medium-4 columns obligationContainer">
+                        <div class="large-4 medium-6 columns obligationContainer">
                             <div class="row">
                                 <h3>Obligations</h3>
                                 <div class="row obligationType">
@@ -991,7 +993,7 @@
                                 </div>-->
                             </div>
                         </div>
-                        <div class="medium-4 columns motivationContainer">
+                        <div class="large-4 medium-6 columns motivationContainer">
                             <div class="row">
                                 <h3>Motivations</h3>
                                 <div class="row motivationType">
