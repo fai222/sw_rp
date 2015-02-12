@@ -19,50 +19,50 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="row container char">
+            <div class="row container char" data-section="character_basic">
                 <div class="large-6 medium-5 small-12 columns charInputContainer">
                     <div class="row">
-                        <input id="character_name" class="charInput" type="text"/>
+                        <input id="character_name" data-entry="character_name" class="charInput" type="text"/>
                     </div>
                     <hr/>
                     <div class="row">
                         <p>Species:</p>
-                        <input id="species" class="charInput" type="text"/>
+                        <input id="species" data-entry="species" class="charInput" type="text"/>
                         <div class="settingsIcon species">
                             <a><img src="img/icon_settings.png" width="100%" height="auto"></a>
                             <div class="speciesSettingsContainer">
                                 <div class="row">
                                         <p>Base Wounds Threshold:</p>
-                                        <input id="base_wounds_threshold" class="speciesSettingsInput" value="0" type="text"/>
+                                        <input id="wounds_base_threshold" data-entry="wounds_base_threshold" class="speciesSettingsInput" value="0" type="text"/>
                                 </div>
                                 <div class="row">
                                     <p>Base Strain Threshold</p>
-                                    <input id="base_strain_threshold" class="speciesSettingsInput" value="0" type="text"/>
+                                    <input id="strain_base_threshold" data-entry="strain_base_threshold" class="speciesSettingsInput" value="0" type="text"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <p>Career:</p>
-                        <input id="career" class="charInput" type="text"/>
+                        <input id="career" data-entry="career" class="charInput" type="text"/>
                     </div>
                     <div class="row">
                         <p>Specialization Trees:</p>
-                        <input id="specialization_trees" class="charInput" type="text"/>
+                        <input id="specialization_trees" data-entry="specialization_trees" class="charInput" type="text"/>
                     </div>
                     <div class="row">
                         <p>Player Name:</p>
-                        <input id="player_name" class="charInput" type="text"/>
+                        <input id="player_name" data-entry="player_name" class="charInput" type="text"/>
                     </div>
                 </div>
                 <div class="large-4 medium-5 small-12 columns xpContainer">
                     <div class="xpInputContainer row">
                         <div class="small-5 columns">
-                            <input id="total_xp" class="xpInput" maxlength="5" value="0" type="tlf"/>
+                            <input id="total_xp" data-entry="total_xp" class="xpInput" maxlength="5" value="0" type="tlf"/>
                             <p>Total XP</p>
                         </div>
                         <div class="small-5 columns">
-                            <input id="available_xp" class="xpInput" maxlength="5" value="0" type="tlf"/>
+                            <input id="available_xp" data-entry="available_xp" class="xpInput" maxlength="5" value="0" type="tlf"/>
                             <p>Available XP</p>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                 <p>Threshold</p>
                             </div>
                             <div class="medium-6 small-6 columns">
-                                <input id="wounds_current" class="attributesInput" maxlength="2" value="0" type="text"/>
+                                <input id="wounds_current" data-entry="wounds_current" class="attributesInput" maxlength="2" value="0" type="text"/>
                                 <p>Current</p>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                                 <p>Threshold</p>
                             </div>
                             <div class="medium-6 small-6 columns">
-                                <input id="strain_current" class="attributesInput" maxlength="2" value="0" type="text"/>
+                                <input id="strain_current" data-entry="strain_current" class="attributesInput" maxlength="2" value="0" type="text"/>
                                 <p>Current</p>
                             </div>
                         </div>
@@ -148,32 +148,32 @@
             </div>
 
             <div class="row container criticalContainer">
-                <h2>Critical Injury:</h2><input id="critical_injuries" class="critInput" value="None." type="text"/>
+                <h2>Critical Injury:</h2><input id="critical_injuries" data-entry="critical_injuries" class="critInput" value="None." type="text"/>
             </div>
 
             <div class="row characteristicsContainer">
                 <div class="medium-2 small-4 columns container">
-                    <input id="brawn" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <input id="brawn" data-entry="brawn" class="characteristicsInput" maxlength="1" value="0" type="text"/>
                     <h2>Brawn</h2>
                 </div>
                 <div class="medium-2 small-4 columns container">
-                    <input id="agility" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <input id="agility" data-entry="agility" class="characteristicsInput" maxlength="1" value="0" type="text"/>
                     <h2>Agility</h2>
                 </div>
                 <div class="medium-2 small-4 columns container">
-                    <input id="intellect" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <input id="intellect" data-entry="intellect" class="characteristicsInput" maxlength="1" value="0" type="text"/>
                     <h2>Intellect</h2>
                 </div>
                 <div class="medium-2 small-4 columns container">
-                    <input id="cunning" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <input id="cunning" data-entry="cunning" class="characteristicsInput" maxlength="1" value="0" type="text"/>
                     <h2>Cunning</h2>
                 </div>
                 <div class="medium-2 small-4 columns container">
-                    <input id="willpower" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <input id="willpower" data-entry="willpower" class="characteristicsInput" maxlength="1" value="0" type="text"/>
                     <h2>Willpower</h2>
                 </div>
                 <div class="medium-2 small-4 columns container">
-                    <input id="presence" class="characteristicsInput" maxlength="1" value="0" type="text"/>
+                    <input id="presence" data-entry="presence" class="characteristicsInput" maxlength="1" value="0" type="text"/>
                     <h2>Presence</h2>
                 </div>
             </div>
@@ -694,7 +694,7 @@
                                 </div>
                             </div>
 
-                            <div class="talentRowContainer">
+                            <div class="talentRowContainer" data-section="talent">
                                 <div class="row talentRow">
                                     <input type="hidden" id="talent_id" readonly/>
                                     <div class="talentName">
@@ -780,7 +780,7 @@
                                 </div>
                             </div>
 
-                            <div class="weaponRowContainer">
+                            <div class="weaponRowContainer" data-section="weapon">
                                 <div class="row weaponRow">
                                     <div class="weaponName">
                                         <input id="weapon_name" class="weaponInput" type="text"/>
@@ -851,7 +851,7 @@
                                     </div>
                                 </div>
 
-                                <div class="armorRowContainer">
+                                <div class="armorRowContainer" data-section="armor">
                                     <div class="row armorRow">
                                         <div class="armorName">
                                             <input id="armor_name" class="armorInput" type="text"/>
@@ -903,7 +903,7 @@
                                     </div>
                                 </div>
 
-                                <div class="itemRowContainer">
+                                <div class="itemRowContainer" data-section="item">
                                     <div class="row itemRow">
                                         <div class="itemName">
                                             <input id="item_name" class="itemInput" type="text"/>
@@ -939,10 +939,10 @@
                     </div>
 
                     <div class="row">
-                        <div class="medium-8 columns backstoryContainer">
+                        <div data-section="description" class="medium-8 columns backstoryContainer">
                             <div class="row">
                                 <h3>Description & Backstory</h3>
-                                <textarea id="description_text"></textarea>
+                                <textarea id="description_text" data-entry="text"></textarea>
                             </div>
                         </div>
 

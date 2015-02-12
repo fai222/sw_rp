@@ -5,14 +5,14 @@
     if($_SESSION['logedin'] == true) {
     	try {
 
-    		$query = $db->prepare("SELECT * FROM character_sheet WHERE user_id = :user_id");
+    		$query = $db->prepare("SELECT * FROM character_basic WHERE user_id = :user_id");
 	        $query->bindParam(":user_id", $_SESSION['userid']);
 	        $query->execute();
-	        $character_sheet_data = $query->fetchAll(PDO::FETCH_ASSOC);
+	        $character_basic = $query->fetchAll(PDO::FETCH_ASSOC);
 	        $query = null;
 
-	        $character_id = $character_sheet_data[0]['id'];
-	        $character_sheet = array('character_sheet_data' => $character_sheet_data);
+	        $character_id = $character_basic[0]['id'];
+	        $character_sheet = array('character_basic' => $character_basic);
 
     		$tables = array(
     			'armor',
