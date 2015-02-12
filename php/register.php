@@ -25,7 +25,7 @@
     {
         if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['password2']))
         {
-            $query = $db->prepare("SELECT * FROM users WHERE username = :username");
+            $query = $db->prepare("SELECT * FROM user WHERE username = :username");
             $query->bindParam(":username", $_POST['username']);
             $query->execute();
             $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -38,7 +38,7 @@
             {
                 if($_POST['password'] == $_POST['password2'])
                 {
-                    $query = $db->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
+                    $query = $db->prepare("INSERT INTO user (username, password) VALUES (:username, :password)");
                     $query->bindParam(":username", $_POST['username']);
                     
                     $salt = "iaw2jsoff03209tgoso398rhs983ht093";

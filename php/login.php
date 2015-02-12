@@ -31,7 +31,7 @@ include 'connect.php';
 
 	try {
 		if(!empty($_POST['username']) && !empty($_POST['password'])) {
-			$query = $db->prepare("SELECT * FROM users WHERE BINARY username = :username AND password = :password");
+			$query = $db->prepare("SELECT * FROM user WHERE BINARY username = :username AND password = :password");
 	        $query->bindParam(":username", $_POST['username']);
 	        
 	        $salt = "iaw2jsoff03209tgoso398rhs983ht093";
