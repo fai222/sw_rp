@@ -678,7 +678,7 @@
                                     <div class="row">
                                         <div class="skillName"><p>Underworld (Int)</p></div>
                                         <div class="skillCareer">
-                                            <input id="underworld_career" data-entry="underworld_career" class="skillCareerInput" type="text"/>
+                                             <input id="underworld_career" data-entry="underworld_career" class="skillCareerInput" type="text"/>
                                         </div>
                                         <input type="hidden" data-entry="underworld" readonly/>
                                         <div class="skillRankContainer" id="underworld">
@@ -980,41 +980,13 @@
                                 <textarea id="description_text" data-entry="text"></textarea>
                             </div>
                         </div>
-
-<<<<<<< HEAD
-                        <div class="large-4 medium-6 columns obligationContainer">
-                            <div class="row">
-                                <h3>Obligations</h3>
-                                <div class="row obligationType">
-                                    <h3>Type:</h3>
-                                    <input id="obligation_type" name="obligation_type" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationPage">
-                                    <h3>Page:</h3>
-                                    <input id="obligation_page" name="obligation_page" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationMagnitude">
-                                    <h3>Magnitude:</h3>
-                                    <input id="obligation_magnitude" name="obligation_magnitude" class="obligationInput" type="text"/>
-                                </div>
-                                <div class="row obligationDescription">
-                                    <h3>Description:</h3>
-                                    <textarea id="obligation_description"></textarea>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="addObligation">
-                                        <div class="addObligationButton">+</div>
-                                        <p>Add Obligation</p>
-=======
-                        <div class="medium-4 columns obligationContainer" data-section="obligation">
+                        <div class="large-4 medium-6 columns obligationContainer" data-section="obligation">
                             <h3>Obligations</h3>
                             <div class="obligationRowContainer">
                                 <div class="row obligationRow" data-row="">
                                     <div class="row obligationType">
                                         <h3>Type:</h3>
                                         <input id="obligation_type" data-entry="type" name="obligation_type" class="obligationInput" type="text"/>
->>>>>>> 93d464c5cd548af0ff517fbf054284aa6e874ab0
                                     </div>
                                     <div class="row obligationPage">
                                         <h3>Page:</h3>
@@ -1038,19 +1010,8 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
+
                         <div class="large-4 medium-6 columns motivationContainer">
-                            <div class="row">
-                                <h3>Motivations</h3>
-                                <div class="row motivationType">
-                                    <h3>Type:</h3>
-                                    <input id="motivation_type" name="motivation_type" class="motivationInput" type="text"/>
-                                </div>
-                                <div class="row motivationDescription">
-                                    <h3>Description:</h3>
-                                    <textarea id="motivation_description"></textarea>
-=======
-                        <div class="medium-4 columns motivationContainer">
                             <h3>Motivations</h3>
                             <div class="motivationRowContainer">
                                 <div class="row motivationRow" data-row="">
@@ -1063,7 +1024,6 @@
                                         <textarea id="motivation_description" data-entry="description"></textarea>
                                     </div>
                                     <hr/>
->>>>>>> 93d464c5cd548af0ff517fbf054284aa6e874ab0
                                 </div>
                             </div>
                             <div class="row">
