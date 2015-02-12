@@ -565,6 +565,10 @@ textarea:focus {
 
 /*---------SKILLS & TALENTS---------*/
 
+.skill {
+	padding: 2rem;
+}
+
 .skillGeneral, .skillCombat, .skillKnowledge {
 	background-color: #D8D8D8;
 	border-radius: 3px;
@@ -684,6 +688,10 @@ textarea:focus {
 
 .skillRank.trained {
 	background-color: #DDC045;
+}
+
+.talent {
+	padding: 2rem;
 }
 
 .talentContainer {
@@ -1257,30 +1265,38 @@ textarea:focus {
 	}
 }
 
-.obligationContainer > .row {
+.obligationContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
 	padding: 1rem;
 }
 
-.obligationContainer h3 {
-	font-size: 14px;
+.obligationContainer h2 {
+	font-size: 20px;
+	text-transform: capitalize;
 	font-weight: bold;
 	color: #393939;
 	margin: 0;
-	line-height: 14px;
+	line-height: 20px;
+	margin-bottom: 0.4rem;
 }
 
-.obligationContainer > .row > h3 {
+.obligationContainer h3 {
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+}
+
+.obligationRowContainer > .row > h3 {
 	margin-bottom: 0.5rem;
 }
 
-.obligationContainer .row .row {
+.obligationRowContainer .row .row {
 	display: flex;
 	margin-bottom: 0.2rem;
 }
 
-.obligationContainer .row .row > h3 {
+.obligationRowContainer .row .row > h3 {
 	font-size: 12px;
 	line-height: 14px;
 	margin-right: 0.2rem;
@@ -1294,12 +1310,12 @@ textarea:focus {
 	flex:1;
 }
 
-.obligationContainer .obligationDescription {
+.obligationRowContainer .obligationDescription {
 	 -webkit-flex-direction: column;
    	flex-direction: column;
 }
 
-.obligationContainer textarea {
+.obligationRowContainer textarea {
 	border:1px solid #D8D8D8;
 	background-color: transparent;
 	width: 100%;
@@ -1313,12 +1329,12 @@ textarea:focus {
 	resize: none;
 }
 
-.obligationContainer textarea:focus {
+.obligationRowContainer textarea:focus {
 	border:1px solid #8a8384;
 	padding: 3px;
 }
 
-.obligationContainer hr {
+.obligationRowContainer hr {
 	border-color:#BAB3B3;
 	background-color: #BAB3B3;
 	color:#BAB3B3;
@@ -1377,30 +1393,40 @@ textarea:focus {
 }
 
 
-.motivationContainer > .row {
+.motivationContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
 	padding: 1rem;
 }
 
-.motivationContainer h3 {
-	font-size: 14px;
+.motivationContainer h2 {
+	font-size: 20px;
+	text-transform: capitalize;
 	font-weight: bold;
 	color: #393939;
 	margin: 0;
-	line-height: 14px;
+	line-height: 20px;
+	margin-bottom: 0.4rem;
 }
 
-.motivationContainer > .row > h3 {
+
+.motivationContainer h3 {
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 20px;
+}
+
+.motivationRowContainer > .row > h3 {
 	margin-bottom: 0.5rem;
 }
 
-.motivationContainer .row .row {
+.motivationRowContainer .row .row {
 	display: flex;
 	margin-bottom: 0.2rem;
 }
 
-.motivationContainer .row .row > h3 {
+.motivationRowContainer .row .row > h3 {
 	font-size: 12px;
 	line-height: 14px;
 	margin-right: 0.2rem;
@@ -1414,12 +1440,12 @@ textarea:focus {
 	flex:1;
 }
 
-.motivationContainer .motivationDescription {
+.motivationRowContainer .motivationDescription {
 	 -webkit-flex-direction: column;
    	flex-direction: column;
 }
 
-.motivationContainer textarea {
+.motivationRowContainer textarea {
 	border:1px solid #D8D8D8;
 	background-color: transparent;
 	width: 100%;
@@ -1433,12 +1459,12 @@ textarea:focus {
 	resize: none;
 }
 
-.motivationContainer textarea:focus {
+.motivationRowContainer textarea:focus {
 	border:1px solid #8a8384;
 	padding: 3px;
 }
 
-.motivationContainer hr {
+.motivationRowContainer hr {
 	border-color:#BAB3B3;
 	background-color: #BAB3B3;
 	color:#BAB3B3;
