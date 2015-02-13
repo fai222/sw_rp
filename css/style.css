@@ -473,22 +473,12 @@ textarea:focus {
 	margin-top: 0.6rem;
 }
 
-@media only screen and (max-width: 40em) {
-	.tabsContainer:nth-child(2) {
-		padding-right: 0;
-	}
-
-	.tabsContainer:nth-child(3) {
-		padding-left: 0;
-	}
-}
-
 .tabs-content > .content {
 	padding: 0;
 }
 
 .tabsContainer {
-	background-color: #302E2F;
+	padding: 0.5rem;
 	transition:all 0.3s ease;
 	margin-top: 1rem;
 	outline: none;
@@ -496,20 +486,24 @@ textarea:focus {
 
 .tabsContainer a {
 	width: 100%;
-	height: 100%;
-	padding:0.5rem;
+	padding:1rem;
+	display: inline-block;
+	outline: none;
+	background-color: #222222;
+	transition:all 0.3s ease;
+	border-radius: 3px;
 	outline: none;
 }
 
-.tabsContainer:hover {
+.tabsContainer a:hover {
 	background-color: #302F2F;
 }
 
-.tabsContainer.active {
+.tabsContainer.active a {
 	background-color: #302F2F;
 }
 
-.tabsContainer:after {
+.tabsContainer a:after {
 	content: "";
 	width: 100px;
 	height: 4px;
@@ -520,22 +514,22 @@ textarea:focus {
     border-width: 4px;
     left: 50%;
     bottom: 0;
-    transform:translateX(-50%) translateY(4px);
+    transform:translateX(-50%) translateY(0px);
     transition:all 0.4s ease;
 }
 
-.tabsContainer:hover:after {
+.tabsContainer a:hover:after {
 	content: "";
 	bottom: 0px;
     left: 50%;
-    transform:translateX(-50%);
+    transform:translateX(-50%) translateY(-7px);
 }
 
-.tabsContainer.active:after {
+.tabsContainer.active a:after {
 	content: "";
 	bottom: 0px;
     left: 50%;
-    transform:translateX(-50%);
+    transform:translateX(-50%) translateY(-7px);
 }
 
 .tabsContainer h2 {
@@ -544,6 +538,12 @@ textarea:focus {
 	text-align: center;
 	margin:0;
 	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 40em) {
+	.tabsContainer {
+		padding: 0.5 0;
+	}
 }
 
 .tabContent {
@@ -571,6 +571,14 @@ textarea:focus {
 
 .skill {
 	padding: 2rem;
+}
+
+.skill h2 {
+	color: #979696;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
 }
 
 .skillGeneral, .skillCombat, .skillKnowledge {
@@ -698,6 +706,14 @@ textarea:focus {
 	padding: 2rem;
 }
 
+.talent h2 {
+	color: #979696;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
 .talentContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
@@ -798,7 +814,15 @@ textarea:focus {
 	padding: 2rem;
 }
 
-.gearInfoContainer {
+.gear h2 {
+	color: #979696;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.row.gearInfoContainer {
 	background-color: #D8D8D8;
 	border-radius: 3px;
 	padding: 1rem;
@@ -943,6 +967,7 @@ textarea:focus {
 	cursor: pointer;
 	transition:all 0.3s ease;
 	border-left: 0!important;
+	padding-left: 0!important;
 }
 
 .addWeapon:hover {
@@ -1060,6 +1085,7 @@ textarea:focus {
 	cursor: pointer;
 	transition:all 0.3s ease;
 	border-left: 0!important;
+	padding-left: 0!important;
 }
 
 .addArmor:hover {
@@ -1172,6 +1198,7 @@ textarea:focus {
 	cursor: pointer;
 	transition:all 0.3s ease;
 	border-left: 0!important;
+	padding-left: 0!important;
 }
 
 .addItem:hover {
@@ -1210,6 +1237,14 @@ textarea:focus {
 
 .backstory {
 	padding: 2rem;
+}
+
+.backstory h2 {
+	color: #979696;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
 }
 
 .backstoryContainer {
@@ -1515,6 +1550,162 @@ textarea:focus {
 }
 
 .addMotivation p {
+	font-size: 12px;
+	padding-left: 0.5rem;
+	margin:0;
+	margin-top: 0.1rem;
+	color: inherit;
+	display: inline-block;
+}
+
+.attachmentModal {
+	background-color: #222222;
+	border-radius: 3px;
+	border:none;
+}
+
+.attachmentModal h2 {
+	color: #979696;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.reveal-modal {
+	min-height: 100px;
+}
+
+.attachmentContainer {
+	background-color: #D8D8D8;
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+.attachmentContainer .header {
+	display: flex;
+	padding:0.5rem 0;
+	border-bottom: 1px solid #BAB3B3;
+}
+
+.attachmentRowChild {
+	display: flex;
+	padding:0.5rem 0;
+}
+
+.attachmentRow hr {
+	color: #BAB3B3;
+	background-color: #BAB3B3;
+	border-color: #BAB3B3;
+	margin: 0.5rem 0 0.5rem 0;
+}
+
+.attachmentRowChild:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.attachmentContainer h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 14px;
+}
+
+.attachmentContainer h4 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0;
+	line-height: 15px;
+}
+
+.attachmentInput {
+	font-size: 12px;
+	color: #393939;
+	display: block;
+}
+
+.attachmentRowChild > div {
+	padding: 0 0.5rem;
+	border-right: 1px solid #BAB3B3;
+	line-height: 14px;	
+}
+
+.attachmentRowChild:last-child {
+	margin-bottom: 1rem;
+	padding-top: 0;
+}
+
+.attachmentName {
+	flex:5;
+	padding-left: 0!important;
+}
+
+.attachmentName input {
+	font-weight: bold;
+}
+
+.attachmentPage {
+	flex:2;
+}
+
+.attachmentModifiers {
+	flex:9;
+	border-right: none!important;
+}
+
+.attachmentMods {
+	display: flex;
+	width: 100%;
+	padding: 0!important;
+	border-right:none!important;
+}
+
+.attachmentMods input {
+	flex:1;
+	padding-left: 0.3rem;
+}
+
+.attachmentContainer .header > div {
+	border:none;
+	padding-left: 0;
+	padding-right: 0.5rem;
+}
+
+.addAttachment {
+	color: #393939;
+	cursor: pointer;
+	transition:all 0.3s ease;
+	border-left: 0!important;
+	padding-left: 0!important;
+}
+
+.addAttachment:hover {
+	color:#2f4b5f;
+}
+
+.addAttachment:hover .addAttachmentButton {
+	background-color:#2f4b5f;
+}
+
+.addAttachmentButton {
+	background-color: #3C6783;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	border-radius: 20px;
+	padding-left: 1px;
+	padding-top: 1px;
+	display: inline-block;
+	transition:all 0.3s ease;
+}
+
+.addAttachment p {
 	font-size: 12px;
 	padding-left: 0.5rem;
 	margin:0;

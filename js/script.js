@@ -1,6 +1,5 @@
 $(function() {
-    $(".settingsIcon").click(function() {
+    $(".settingsIcon a").click(function() {
         $(".speciesSettingsContainer").toggleClass("active");
-        console.log("lol");
     });
 });

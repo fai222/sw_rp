@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="medium-2 columns avatarContainer">
-                    <img src="img/avatar.jpg" width="100%" height="auto">
+                    <img src="img/avatar.png" width="100%" height="auto">
                 </div>
             </div>
             
@@ -179,18 +179,18 @@
             </div>
 
             <ul class="row" data-tab>
-                <li class="medium-3 small-6 columns tabsContainer active">
+                <li class="medium-4 columns tabsContainer active">
                    <a href="#skill_talent"><h2>Skills & Talents</h2></a>
                 </li>
-                <li class="medium-3 small-6 columns tabsContainer">
+                <li class="medium-4 columns tabsContainer">
                    <a href="#gear"><h2>Gear & Items</h2></a>
                 </li>
-                <li class="medium-3 small-6 columns tabsContainer">
+                <li class="medium-4 columns tabsContainer">
                    <a href="#backstory"><h2>Backstory</h2></a>
                 </li>
-                <li class="medium-3 small-6 columns tabsContainer">
+                <!--<li class="medium-3 small-6 columns tabsContainer">
                    <a href="#notes"><h2>Notes</h2></a>
-                </li>
+                </li>-->
             </ul>
 
             <div class="row tabs-content">
@@ -939,7 +939,7 @@
                                             <input id="item_page" class="itemInput" type="text"/>
                                         </div>
                                         <div class="itemQuantity">
-                                            <input id="item_page" class="itemInput" type="text"/>
+                                            <input id="item_quantity" class="itemInput" type="text"/>
                                         </div>
                                         <div class="itemSummary">
                                             <input id="item_summary" class="itemInput" type="text"/>
@@ -1034,6 +1034,77 @@
                     <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
                 </div>
             </div>
+        </div>
+
+        <div id="myModal" class="reveal-modal attachmentModal" data-reveal>
+            <div class="row">
+                <div class="small-6 columns"><h2>Blaster Pistol</h2></div>
+                <div class="small-6 columns"><h2>Hardpoints: 2</h2></div>
+            </div>
+            <div class="row attachmentContainer">
+                <div class="row header">
+                    <div class="attachmentName">
+                        <h3>Attachment</h3>
+                    </div>
+                    <div class="attachmentPage">
+                        <h3>Page</h3>
+                    </div>
+                    <div class="attachmentModifiers">
+                        <h3>Base Modifiers</h3>
+                    </div>
+                </div>
+
+                <div class="attachmentRowContainer" data-section="attachment">
+                    <div class="row attachmentRow">
+                        <div class="attachmentRowChild">
+                            <div class="attachmentName">
+                                <input id="attachment_name" class="attachmentInput" type="text"/>
+                            </div>
+                            <div class="attachmentPage">
+                                <input id="attachment_page" class="attachmentInput" type="text"/>
+                            </div>
+                            <div class="attachmentModifiers">
+                                <input id="attachment_modifiers" class="attachmentInput" type="text"/>
+                            </div>
+                        </div>
+                        <div class="attachmentRowChild">
+                            <div class="attachmentMods">
+                                <h4>Mods:</h4>
+                                <input id="attachment_modifiers" class="attachmentInput" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row attachmentRow">
+                        <hr/>
+                        <div class="attachmentRowChild">
+                            <div class="attachmentName">
+                                <input id="attachment_name" class="attachmentInput" type="text"/>
+                            </div>
+                            <div class="attachmentPage">
+                                <input id="attachment_page" class="attachmentInput" type="text"/>
+                            </div>
+                            <div class="attachmentModifiers">
+                                <input id="attachment_modifiers" class="attachmentInput" type="text"/>
+                            </div>
+                        </div>
+                        <div class="attachmentRowChild">
+                            <div class="attachmentMods">
+                                <h4>Mods:</h4>
+                                <input id="attachment_modifiers" class="attachmentInput" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="addAttachment">
+                        <div class="addAttachmentButton">+</div>
+                        <p>Add Attachment</p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="close-reveal-modal">&#215;</a>
         </div>
 
         <script src="js/vendor/jquery.js"></script>
