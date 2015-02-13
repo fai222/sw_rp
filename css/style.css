@@ -92,6 +92,25 @@ textarea:focus {
 	border-radius: 3px;
 }
 
+.savedContainer {
+	background-color: #1E1E1E;
+	border-radius: 3px;
+	padding:0.5rem 2rem;
+	position: fixed;
+	z-index: 100;
+	top: 0px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+  	-ms-transform: translateX(-50%);
+  	transform: translateX(-50%);
+}
+
+.savedContainer h3 {
+	color:#D8D8D8;
+	font-weight: bold;
+	font-size: 20px;
+}
+
 .char {
 	height: 240px;
 	padding: 2.5rem;

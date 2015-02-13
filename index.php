@@ -18,6 +18,9 @@
         <script src="js/vendor/modernizr.js"></script>
     </head>
     <body>
+        <div class="savedContainer">
+            <h3>Saving...</h3>
+        </div>
         <div class="wrapper">
             <div class="row container char" data-section="character_basic">
                 <div class="large-6 medium-5 small-12 columns charInputContainer">
@@ -1074,7 +1077,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row attachmentRow">
+                    <!--<div class="row attachmentRow">
                         <hr/>
                         <div class="attachmentRowChild">
                             <div class="attachmentName">
@@ -1093,7 +1096,7 @@
                                 <input id="attachment_modifiers" class="attachmentInput" type="text"/>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
 
                 <div class="row">
