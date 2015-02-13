@@ -72,7 +72,7 @@
                 </div>
             </div>
             
-            <div class="row attributesContainer">
+            <div class="row attributesContainer" data-section="character_basic">
                 <div class="medium-3 small-6 columns">
                     <div class="container">
                         <div class="row">
@@ -147,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="row container criticalContainer">
+            <div class="row container criticalContainer" data-section="character_basic">
                 <h2>Critical Injury:</h2><input id="critical_injuries" data-entry="critical_injuries" class="critInput" value="None." type="text"/>
             </div>
 
@@ -976,7 +976,7 @@
                         <div class="large-4 medium-6 columns obligationContainer" data-section="obligation">
                             <h2>Obligations</h2>
                             <div class="obligationRowContainer">
-                                <div class="row obligationRow" data-row="">
+                                <div class="row obligationRow" data-rowId="">
                                     <div class="row obligationType">
                                         <h3>Type:</h3>
                                         <input id="obligation_type" data-entry="type" name="obligation_type" class="obligationInput" type="text"/>
@@ -1004,10 +1004,11 @@
                             </div>
                         </div>
 
-                        <div class="large-4 medium-6 columns motivationContainer">
+                        <div class="large-4 medium-6 columns motivationContainer" data-section="motivation">
                             <h2>Motivations</h2>
+
                             <div class="motivationRowContainer">
-                                <div class="row motivationRow" data-row="">
+                                <div class="row motivationRow" data-rowId="">
                                     <div class="row motivationType">
                                         <h3>Type:</h3>
                                         <input id="motivation_type" data-entry="type" name="motivation_type" class="motivationInput" type="text"/>

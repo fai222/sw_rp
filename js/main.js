@@ -6,8 +6,8 @@ $(document).ready(function() {
 		'weapon': "<div class=\"row weaponRow\" data-rowId=\"\"><div class=\"weaponName\"><input id=\"weapon_name\" data-entry=\"name\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponPage\"><input id=\"weapon_page\" data-entry=\"page\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponSkill\"><input id=\"weapon_skill\" data-entry=\"skill\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponDamage\"><input id=\"weapon_damage\" data-entry=\"damage\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponCritical\"><input id=\"weapon_critical\" data-entry=\"critical\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponRange\"><input id=\"weapon_range\" data-entry=\"range\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponHardpoints\"><input id=\"weapon_hardpoints\" data-entry=\"hardpoints\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponEncumbrance\"><input id=\"weapon_encumbrance\" data-entry=\"encumbrance\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponSpecial\"><input id=\"weapon_special\" data-entry=\"special\" class=\"weaponInput\" type=\"text\"/></div><div class=\"weaponAttachment\"><img src=\"img/icon_attachment.png\" width=\"13px\" height=\"auto\"></div></div>",
 		'armor': "<div class=\"row armorRow\" data-rowId=\"\"><div class=\"armorName\"><input id=\"armor_name\" data-entry=\"name\" class=\"armorInput\" type=\"text\"/></div><div class=\"armorPage\"><input id=\"armor_page\" data-entry=\"page\" class=\"armorInput\" type=\"text\"/></div><div class=\"armorDefence\"><input id=\"armor_defence\" data-entry=\"defence\" class=\"armorInput\" type=\"text\"/></div><div class=\"armorSoak\"><input id=\"armor_soak\" data-entry=\"soak\" class=\"armorInput\" type=\"text\"/></div><div class=\"armorHardpoints\"><input id=\"armor_hardpoints\" data-entry=\"hardpoints\" class=\"armorInput\" type=\"text\"/></div><div class=\"armorEncumbrance\"><input id=\"armor_encumbrance\" data-entry=\"encumbrance\" class=\"armorInput\" type=\"text\"/></div><div class=\"armorAttachment\"><img src=\"img/icon_attachment.png\" width=\"13px\" height=\"auto\"></div></div>",
 		'item': "<div class=\"row itemRow\" data-rowId=\"\"><div class=\"itemName\"><input id=\"item_name\" data-entry=\"name\" class=\"itemInput\" type=\"text\"/></div><div class=\"itemPage\"><input id=\"item_page\" data-entry=\"page\" class=\"itemInput\" type=\"text\"/></div><div class=\"itemQuantity\"><input id=\"item_quantity\" data-entry=\"quantity\" class=\"itemInput\" type=\"text\"/></div><div class=\"itemEncumbrance\"><input id=\"item_encumbrance\" data-entry=\"encumbrance\" class=\"itemInput\" type=\"text\"/></div></div>",
-		'obligation': "<div class=\"row obligationRow\" data-row=\"\"><div class=\"row obligationType\"><h3>Type:</h3><input id=\"obligation_type\" data-entry=\"type\" name=\"obligation_type\" class=\"obligationInput\" type=\"text\"/></div><div class=\"row obligationPage\"><h3>Page:</h3><input id=\"obligation_page\" data-entry=\"page\" name=\"obligation_page\" class=\"obligationInput\" type=\"text\"/></div><div class=\"row obligationMagnitude\"><h3>Magnitude:</h3><input id=\"obligation_magnitude\" data-entry=\"magnitude\" name=\"obligation_magnitude\" class=\"obligationInput\" type=\"text\"/></div><div class=\"row obligationDescription\"><h3>Description:</h3><textarea id=\"obligation_description\" data-entry=\"description\"></textarea></div><hr></div>",
-		'motivation': "<div class=\"row motivationRow\" data-row=\"\"><div class=\"row motivationType\"><h3>Type:</h3><input id=\"motivation_type\" data-entry=\"type\" name=\"motivation_type\" class=\"motivationInput\" type=\"text\"/></div><div class=\"row motivationDescription\"><h3>Description:</h3><textarea id=\"motivation_description\" data-entry=\"description\"></textarea></div><hr/></div>"
+		'obligation': "<div class=\"row obligationRow\" data-rowId=\"\"><div class=\"row obligationType\"><h3>Type:</h3><input id=\"obligation_type\" data-entry=\"type\" name=\"obligation_type\" class=\"obligationInput\" type=\"text\"/></div><div class=\"row obligationPage\"><h3>Page:</h3><input id=\"obligation_page\" data-entry=\"page\" name=\"obligation_page\" class=\"obligationInput\" type=\"text\"/></div><div class=\"row obligationMagnitude\"><h3>Magnitude:</h3><input id=\"obligation_magnitude\" data-entry=\"magnitude\" name=\"obligation_magnitude\" class=\"obligationInput\" type=\"text\"/></div><div class=\"row obligationDescription\"><h3>Description:</h3><textarea id=\"obligation_description\" data-entry=\"description\"></textarea></div><hr></div>",
+		'motivation': "<div class=\"row motivationRow\" data-rowId=\"\"><div class=\"row motivationType\"><h3>Type:</h3><input id=\"motivation_type\" data-entry=\"type\" name=\"motivation_type\" class=\"motivationInput\" type=\"text\"/></div><div class=\"row motivationDescription\"><h3>Description:</h3><textarea id=\"motivation_description\" data-entry=\"description\"></textarea></div><hr/></div>"
 	};
 
 	function displayData() {
@@ -41,7 +41,7 @@ $(document).ready(function() {
 			} else {
 				var rowSelector = "." + i + "Row";
 				var rowContainerSelector = rowSelector + "Container";
-
+				
 				if($(rowContainerSelector).length) {
 					$(rowContainerSelector).empty();
 					for(var ii = 0 in character_sheet[i]) {
@@ -81,7 +81,6 @@ $(document).ready(function() {
 				console.log(character_sheet);
 				displayData();
 				calculateData();
-				sendCharacterSheet();
 			}
 		});
 	}
@@ -91,7 +90,9 @@ $(document).ready(function() {
 		$('[data-section]').each(function() {
 			var sectionName = $(this).data('section');
 			var rows = $(this).find('[data-rowId]');
-			data[sectionName] = {};
+			if(data[sectionName] === undefined) {
+				data[sectionName] = {};
+			}
 
 			if(rows.length) {
 				$(rows).each(function() {
@@ -110,10 +111,19 @@ $(document).ready(function() {
 			}
 		});
 
-		console.log("SEND DATA!");
-		console.log(data);
+		var dataJSON = JSON.stringify(data);
+		console.log("dataJSON: " + dataJSON);
+		$.post("php/store_character_sheet.php", {character_sheet: dataJSON}, function(data, status){
+			if(status == "success") {
+				console.log("data sent!");
+				console.log(data + status);
+			}
+		});
 	}
 
-
 	getCharacterSheet();
+
+	$('input').blur(function() {
+		sendCharacterSheet();
+	});
 });

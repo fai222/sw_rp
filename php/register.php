@@ -32,7 +32,7 @@
             
             if($query->rowCount() >= 1)
             {
-                echo "Brukernavnet er allerede tatt, venligst velg et annet brukernavn.";
+                echo "This username is already in use, please try another one.";
             }
             else
             {
@@ -47,18 +47,30 @@
                     $query->bindParam(":password", $hashedPassword);
                     
                     $query->execute();
-                    echo "Registrering vellykket.";
+                    $query = null;
+
+                    $query = $db->prepare("SELECT * FROM user WHERE username = :username");
+                    $query->bindParam(":username", $_POST['username']);
+                    $query->execute();
+                    $result = $query->fetch(PDO::FETCH_ASSOC);
+                    $query = null;
+
+                    $query = $db->prepare("INSERT INTO character_basic (user_id) VALUES (:user_id)");
+                    $query->bindParam(":user_id", $result['id']);
+                    $query->execute();
+
+                    echo "Registration successful. Empty character sheet created.";
                 }
                 else
                 {
-                    echo "Passordene er ikke like, vennligst prøv igjen.";
+                    echo "Passwords did not match, please try again.";
                 }
             }
             
         }
         else
         {
-            echo "Vennligst skriv inn brukernavn og passord";
+            echo "Please enter username and password.";
         }
     }
     catch (PDOException $e)
