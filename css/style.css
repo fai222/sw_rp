@@ -103,11 +103,11 @@ textarea:focus {
 }
 
 .loading {
-	-webkit-animation: loading 3s ease infinite;
-	-moz-animation: loading 3s ease infinite;
-	-ms-animation: loading 3s ease infinite;
-	-o-animation: loading 3s ease infinite;
-	animation: loading 3s ease infinite;
+	-webkit-animation: loading 3s ease 1;
+	-moz-animation: loading 3s ease 1;
+	-ms-animation: loading 3s ease 1;
+	-o-animation: loading 3s ease 1;
+	animation: loading 3s ease 1;
 }
 
 @-webkit-keyframes loading {

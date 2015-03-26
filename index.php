@@ -18,7 +18,7 @@
         <script src="js/vendor/modernizr.js"></script>
     </head>
     <body>
-        <div class="savedContainer"></div>
+        <div class="savedContainer loading"></div>
 
         <div class="wrapper">
             <div class="row container char" data-section="character_basic">
