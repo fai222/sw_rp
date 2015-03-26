@@ -153,7 +153,7 @@
                 <h2>Critical Injury:</h2><input id="critical_injuries" data-entry="critical_injuries" class="critInput" value="None." type="text"/>
             </div>
 
-            <div class="row characteristicsContainer">
+            <div class="row characteristicsContainer" data-section="character_basic">
                 <div class="medium-2 small-4 columns container">
                     <input id="brawn" data-entry="brawn" class="characteristicsInput" maxlength="1" value="0" type="text"/>
                     <h2>Brawn</h2>

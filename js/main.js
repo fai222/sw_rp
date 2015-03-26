@@ -112,18 +112,21 @@ $(document).ready(function() {
 		});
 
 		var dataJSON = JSON.stringify(data);
-		console.log("dataJSON: " + dataJSON);
+		console.log(dataJSON);
 		$.post("php/store_character_sheet.php", {character_sheet: dataJSON}, function(data, status){
 			if(status == "success") {
 				console.log("data sent!");
-				console.log(data + status);
+				console.log(status + ": " + data);
 			}
 		});
 	}
 
 	getCharacterSheet();
 
-	$('input').blur(function() {
-		sendCharacterSheet();
+	$(document).keypress("s",function(e) {
+		if(e.ctrlKey) {
+			e.preventDefault();
+			sendCharacterSheet();
+		}
 	});
 });

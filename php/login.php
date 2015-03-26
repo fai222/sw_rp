@@ -17,13 +17,14 @@
 <?php
 include 'connect.php';
 
-	function login($id) {
+	function login($id, $character_id) {
 		session_start();
         session_regenerate_id();
 
         $_SESSION['logedin'] = true;
         $_SESSION['username'] = $_POST['username'];
         $_SESSION['userid'] = $id;
+        $_SESSION['characterid'] = $character_id;
         
         echo "Logged in!";
         header("Location: ../index.php");
@@ -31,7 +32,7 @@ include 'connect.php';
 
 	try {
 		if(!empty($_POST['username']) && !empty($_POST['password'])) {
-			$query = $db->prepare("SELECT * FROM user WHERE BINARY username = :username AND password = :password");
+			$query = $db->prepare("SELECT * FROM `user` WHERE BINARY `username` = :username AND `password` = :password");
 	        $query->bindParam(":username", $_POST['username']);
 	        
 	        $salt = "iaw2jsoff03209tgoso398rhs983ht093";
@@ -49,7 +50,11 @@ include 'connect.php';
 	        }
 
 			if($exists) {
-				login($result[0]['id']);
+				$query2 = $db->prepare("SELECT `id` FROM `character_basic` WHERE `user_id` = :user_id");
+			    $query2->bindParam(":user_id", $result[0]['id']);
+			    $query2->execute();
+			    $result2 = $query2->fetchAll(PDO::FETCH_ASSOC);
+				login($result[0]['id'], $result2[0]['id']);
 			} else {
 				echo "Feil brukernavn eller passord.";
 			}
