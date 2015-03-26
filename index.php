@@ -18,9 +18,8 @@
         <script src="js/vendor/modernizr.js"></script>
     </head>
     <body>
-        <div class="savedContainer">
-            <h3>Saving...</h3>
-        </div>
+        <div class="savedContainer"></div>
+
         <div class="wrapper">
             <div class="row container char" data-section="character_basic">
                 <div class="large-6 medium-5 small-12 columns charInputContainer">

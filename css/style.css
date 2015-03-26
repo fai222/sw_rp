@@ -93,16 +93,51 @@ textarea:focus {
 }
 
 .savedContainer {
-	background-color: #1E1E1E;
-	border-radius: 3px;
-	padding:0.5rem 2rem;
 	position: fixed;
 	z-index: 100;
 	top: 0px;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-  	-ms-transform: translateX(-50%);
-  	transform: translateX(-50%);
+	left: 0px;
+	width: 0%;
+	height: 5px;
+	background-color: #A02F2F;
+}
+
+.loading {
+	-webkit-animation: loading 3s ease infinite;
+	-moz-animation: loading 3s ease infinite;
+	-ms-animation: loading 3s ease infinite;
+	-o-animation: loading 3s ease infinite;
+	animation: loading 3s ease infinite;
+}
+
+@-webkit-keyframes loading {
+    0% {width: 0%;}
+    70% {opacity: 1; width: 100%;}
+    100% {width: 100%; opacity: 0;}
+}
+
+@-moz-keyframes loading {
+    0% {width: 0%;}
+    70% {opacity: 1; width: 100%;}
+    100% {width: 100%; opacity: 0;}
+}
+
+@-ms-keyframes loading {
+    0% {width: 0%;}
+    70% {opacity: 1; width: 100%;}
+    100% {width: 100%; opacity: 0;}
+}
+
+@-o-keyframes loading {
+    0% {width: 0%;}
+    70% {opacity: 1; width: 100%;}
+    100% {width: 100%; opacity: 0;}
+}
+
+@keyframes loading {
+    0% {width: 0%;}
+    70% {opacity: 1; width: 100%;}
+    100% {width: 100%; opacity: 0;}
 }
 
 .savedContainer h3 {
@@ -503,6 +538,14 @@ textarea:focus {
 	outline: none;
 }
 
+.tabsContainer:first-child {
+	padding-left: 0;
+}
+
+.tabsContainer:last-child {
+	padding-right: 0;
+}
+
 .tabsContainer a {
 	width: 100%;
 	padding:1rem;
@@ -559,9 +602,44 @@ textarea:focus {
 	text-transform: uppercase;
 }
 
+@media only screen and (max-width: 64em) {
+	.tabsContainer {
+		padding: 0;
+	}
+
+	.tabsContainer a:after {
+		content: "";
+		width: 100px;
+		height: 4px;
+		display: block;
+		position: absolute;
+		border-color: transparent transparent #151515 transparent;
+	    border-style: solid;
+	    border-width: 4px;
+	    left: 50%;
+	    bottom: 0;
+	    transform:translateX(-50%) translateY(7px);
+	    transition:all 0.4s ease;
+	}
+
+	.tabsContainer a:hover:after {
+		content: "";
+		bottom: 0px;
+	    left: 50%;
+	    transform:translateX(-50%) translateY(0);
+	}
+
+	.tabsContainer.active a:after {
+		content: "";
+		bottom: 0px;
+	    left: 50%;
+	    transform:translateX(-50%) translateY(0);
+	}
+}
+
 @media only screen and (max-width: 40em) {
 	.tabsContainer {
-		padding: 0.5 0;
+		padding: 0.5rem 0;
 	}
 }
 
@@ -1090,7 +1168,7 @@ textarea:focus {
 .armorContainer .row > .armorAttachment {
 	flex:1;
 	border-left:0;
-	text-align: center;
+	text-align: right;
 }
 
 .armorContainer .header > div {
