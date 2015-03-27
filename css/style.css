@@ -104,31 +104,10 @@ textarea:focus {
 
 .loading {
 	-webkit-animation: loading 3s ease 1;
-	-moz-animation: loading 3s ease 1;
-	-ms-animation: loading 3s ease 1;
-	-o-animation: loading 3s ease 1;
 	animation: loading 3s ease 1;
 }
 
 @-webkit-keyframes loading {
-    0% {width: 0%;}
-    70% {opacity: 1; width: 100%;}
-    100% {width: 100%; opacity: 0;}
-}
-
-@-moz-keyframes loading {
-    0% {width: 0%;}
-    70% {opacity: 1; width: 100%;}
-    100% {width: 100%; opacity: 0;}
-}
-
-@-ms-keyframes loading {
-    0% {width: 0%;}
-    70% {opacity: 1; width: 100%;}
-    100% {width: 100%; opacity: 0;}
-}
-
-@-o-keyframes loading {
     0% {width: 0%;}
     70% {opacity: 1; width: 100%;}
     100% {width: 100%; opacity: 0;}
@@ -171,6 +150,8 @@ textarea:focus {
 }
 
 .charInputContainer .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -194,7 +175,9 @@ textarea:focus {
 	padding-left: 5px;
 	text-transform: capitalize;
 	font-weight: bold;
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 }
 
 @media only screen and (max-width: 40em) {
@@ -206,12 +189,18 @@ textarea:focus {
 	}
 
 	.charInputContainer .row {
+		display: -webkit-flex;
+		display: -ms-flexbox;
 		display: flex;
-		flex-wrap:wrap;
+		-webkit-flex-wrap:wrap;
+		    -ms-flex-wrap:wrap;
+		        flex-wrap:wrap;
 	}
 
 	.charInput {
-		flex-basis:length(100);
+		-webkit-flex-basis:length(100);
+		    -ms-flex-preferred-size:length(100);
+		        flex-basis:length(100);
 	}
 }
 
@@ -247,15 +236,23 @@ textarea:focus {
 	right: 0px;
 	top: 15px;
 	border-radius: 3px;
-	transform:scale(0.01);
+	-webkit-transform:scale(0.01);
+	    -ms-transform:scale(0.01);
+	        transform:scale(0.01);
 
-	transform-origin:60%;
+	-webkit-transform-origin:60%;
+
+	    -ms-transform-origin:60%;
+
+	        transform-origin:60%;
 	visibility: hidden;
 	transition:all 0.1s ease-out;
 }
 
 .speciesSettingsContainer.active {
-	transform:scale(1);
+	-webkit-transform:scale(1);
+	    -ms-transform:scale(1);
+	        transform:scale(1);
 	visibility: visible;
 	right: 40px;
 }
@@ -278,6 +275,8 @@ textarea:focus {
 }
 
 .speciesSettingsContainer .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	margin-bottom: 0.5rem;
 }
@@ -290,12 +289,16 @@ textarea:focus {
 	text-transform: capitalize;
 	font-size: 12px;
 	margin: 0;
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .speciesSettingsInput {
 	border-radius: 3px;
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 	text-align: center;
 	font-size: 30px;
 	font-weight: bold;
@@ -576,7 +579,9 @@ textarea:focus {
     border-width: 4px;
     left: 50%;
     bottom: 0;
-    transform:translateX(-50%) translateY(0px);
+    -webkit-transform:translateX(-50%) translateY(0px);
+        -ms-transform:translateX(-50%) translateY(0px);
+            transform:translateX(-50%) translateY(0px);
     transition:all 0.4s ease;
 }
 
@@ -584,14 +589,18 @@ textarea:focus {
 	content: "";
 	bottom: 0px;
     left: 50%;
-    transform:translateX(-50%) translateY(-7px);
+    -webkit-transform:translateX(-50%) translateY(-7px);
+        -ms-transform:translateX(-50%) translateY(-7px);
+            transform:translateX(-50%) translateY(-7px);
 }
 
 .tabsContainer.active a:after {
 	content: "";
 	bottom: 0px;
     left: 50%;
-    transform:translateX(-50%) translateY(-7px);
+    -webkit-transform:translateX(-50%) translateY(-7px);
+        -ms-transform:translateX(-50%) translateY(-7px);
+            transform:translateX(-50%) translateY(-7px);
 }
 
 .tabsContainer h2 {
@@ -618,7 +627,9 @@ textarea:focus {
 	    border-width: 4px;
 	    left: 50%;
 	    bottom: 0;
-	    transform:translateX(-50%) translateY(7px);
+	    -webkit-transform:translateX(-50%) translateY(7px);
+	        -ms-transform:translateX(-50%) translateY(7px);
+	            transform:translateX(-50%) translateY(7px);
 	    transition:all 0.4s ease;
 	}
 
@@ -626,14 +637,18 @@ textarea:focus {
 		content: "";
 		bottom: 0px;
 	    left: 50%;
-	    transform:translateX(-50%) translateY(0);
+	    -webkit-transform:translateX(-50%) translateY(0);
+	        -ms-transform:translateX(-50%) translateY(0);
+	            transform:translateX(-50%) translateY(0);
 	}
 
 	.tabsContainer.active a:after {
 		content: "";
 		bottom: 0px;
 	    left: 50%;
-	    transform:translateX(-50%) translateY(0);
+	    -webkit-transform:translateX(-50%) translateY(0);
+	        -ms-transform:translateX(-50%) translateY(0);
+	            transform:translateX(-50%) translateY(0);
 	}
 }
 
@@ -698,9 +713,13 @@ textarea:focus {
 }
 
 .skillGeneral .row, .skillCombat .row, .skillKnowledge .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex; 
 	padding: 0.5rem 0;
-	align-items: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .skillCombat {
@@ -743,18 +762,26 @@ textarea:focus {
 }
 
 .skillName {
-	flex: 3;
+	-webkit-flex: 3;
+	    -ms-flex: 3;
+	        flex: 3;
 	border-right: 1px solid #BAB3B3;
 }
 
 .skillCareer {
-	flex: 2;
+	-webkit-flex: 2;
+	    -ms-flex: 2;
+	        flex: 2;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
 
 .skillRankContainer {
-	flex: 3;
+	-webkit-flex: 3;
+	    -ms-flex: 3;
+	        flex: 3;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -764,7 +791,9 @@ textarea:focus {
 }
 
 .skillRank {
-	flex:5;
+	-webkit-flex:5;
+	    -ms-flex:5;
+	        flex:5;
 	height: 10px;
 	background-color: #CBCBCB;
 	border:1px solid #979797;
@@ -774,8 +803,10 @@ textarea:focus {
 }
 
 .skillRank:hover {
-	background-color: rgba(132, 204, 87, 0.5);
-
+	background-color: rgba(132, 204, 87, 0.4);
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.30);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.30);
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.30);
 }
 
 .skillRank:first-child {
@@ -796,7 +827,15 @@ textarea:focus {
 }
 
 .skillRank.trained {
+	background-color: #AED297;
+}
+
+.skillRank.trained.ranked {
 	background-color: #DDC045;
+}
+
+.skillRank.trained.ranked:hover {
+	background-color: rgba(132, 204, 87, 0.6);
 }
 
 .talent {
@@ -818,6 +857,8 @@ textarea:focus {
 }
 
 .talentContainer .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	padding:0.5rem 0;
 	border-bottom: 1px solid #BAB3B3;
@@ -843,20 +884,26 @@ textarea:focus {
 }
 
 .talentName {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 	padding-right: 0.5rem;
 	
 }
 
 .talentPage {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 	border-left: 1px solid #BAB3B3;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 }
 
 .talentSummary {
-	flex:6;
+	-webkit-flex:6;
+	    -ms-flex:6;
+	        flex:6;
 	border-left: 1px solid #BAB3B3;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
@@ -935,6 +982,8 @@ textarea:focus {
 }
 
 .gearInfoContainer .columns {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -978,6 +1027,8 @@ textarea:focus {
 }
 
 .weaponContainer .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	padding:0.5rem 0;
 	border-bottom: 1px solid #BAB3B3;
@@ -1003,52 +1054,74 @@ textarea:focus {
 }
 
 .weaponContainer .row > div {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 	border-left: 1px solid #BAB3B3;
 	padding: 0 0.5rem;
 	line-height: 14px;	
 }
 
 .weaponContainer .row > div.weaponName {
-	flex:5;
+	-webkit-flex:5;
+	    -ms-flex:5;
+	        flex:5;
 	border-left: none;
 	padding-left: 0;
 }
 
 .weaponContainer .row > .weaponSkill {
-	flex:3;
+	-webkit-flex:3;
+	    -ms-flex:3;
+	        flex:3;
 }
 
 .weaponContainer .row > .weaponPage {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .weaponContainer .row > .weaponDamage {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .weaponContainer .row > .weaponCritical {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 }
 
 .weaponContainer .row > .weaponRange {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .weaponContainer .row > .weaponHardpoints {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 }
 
 .weaponContainer .row > .weaponEncumbrance {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .weaponContainer .row > .weaponSpecial {
-	flex:5;
+	-webkit-flex:5;
+	    -ms-flex:5;
+	        flex:5;
 }
 
 .weaponContainer .row > .weaponAttachment {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 	border-left:0;
 	text-align: center;
 }
@@ -1116,6 +1189,8 @@ textarea:focus {
 }
 
 .armorContainer .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	padding:0.5rem 0;
 	border-bottom: 1px solid #BAB3B3;
@@ -1141,32 +1216,44 @@ textarea:focus {
 }
 
 .armorContainer .row > div {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 	border-left: 1px solid #BAB3B3;
 	padding: 0 0.5rem;
 	line-height: 14px;	
 }
 
 .armorContainer .row > div.armorName {
-	flex:5;
+	-webkit-flex:5;
+	    -ms-flex:5;
+	        flex:5;
 	border-left: none;
 	padding-left: 0;
 }
 
 .armorContainer .row > .armorPage {
-	flex:3;
+	-webkit-flex:3;
+	    -ms-flex:3;
+	        flex:3;
 }
 
 .armorContainer .row > .armorHardpoints {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 }
 
 .armorContainer .row > .armorEncumbrance {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .armorContainer .row > .armorAttachment {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 	border-left:0;
 	text-align: right;
 }
@@ -1235,6 +1322,8 @@ textarea:focus {
 }
 
 .itemContainer .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	padding:0.5rem 0;
 	border-bottom: 1px solid #BAB3B3;
@@ -1260,28 +1349,38 @@ textarea:focus {
 }
 
 .itemContainer .row > div {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 	border-left: 1px solid #BAB3B3;
 	padding: 0 0.5rem;
 	line-height: 14px;	
 }
 
 .itemContainer .row > div.itemName {
-	flex:5;
+	-webkit-flex:5;
+	    -ms-flex:5;
+	        flex:5;
 	border-left: none;
 	padding-left: 0;
 }
 
 .itemContainer .row > .itemPage {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .itemContainer .row > .itemQuantity {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 }
 
 .itemContainer .row > .itemEncumbrance {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .itemContainer .header > div {
@@ -1437,6 +1536,8 @@ textarea:focus {
 }
 
 .obligationRowContainer .row .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	margin-bottom: 0.2rem;
 }
@@ -1452,12 +1553,15 @@ textarea:focus {
 	line-height: 12px;
 	color: #393939;
 	display: block;
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 }
 
 .obligationRowContainer .obligationDescription {
 	 -webkit-flex-direction: column;
-   	flex-direction: column;
+   	-ms-flex-direction: column;
+	     flex-direction: column;
 }
 
 .obligationRowContainer textarea {
@@ -1567,6 +1671,8 @@ textarea:focus {
 }
 
 .motivationRowContainer .row .row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	margin-bottom: 0.2rem;
 }
@@ -1582,12 +1688,15 @@ textarea:focus {
 	line-height: 12px;
 	color: #393939;
 	display: block;
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 }
 
 .motivationRowContainer .motivationDescription {
 	 -webkit-flex-direction: column;
-   	flex-direction: column;
+   	-ms-flex-direction: column;
+	     flex-direction: column;
 }
 
 .motivationRowContainer textarea {
@@ -1680,12 +1789,16 @@ textarea:focus {
 }
 
 .attachmentContainer .header {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	padding:0.5rem 0;
 	border-bottom: 1px solid #BAB3B3;
 }
 
 .attachmentRowChild {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	padding:0.5rem 0;
 }
@@ -1736,7 +1849,9 @@ textarea:focus {
 }
 
 .attachmentName {
-	flex:5;
+	-webkit-flex:5;
+	    -ms-flex:5;
+	        flex:5;
 	padding-left: 0!important;
 }
 
@@ -1745,15 +1860,21 @@ textarea:focus {
 }
 
 .attachmentPage {
-	flex:2;
+	-webkit-flex:2;
+	    -ms-flex:2;
+	        flex:2;
 }
 
 .attachmentModifiers {
-	flex:9;
+	-webkit-flex:9;
+	    -ms-flex:9;
+	        flex:9;
 	border-right: none!important;
 }
 
 .attachmentMods {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
 	padding: 0!important;
@@ -1761,7 +1882,9 @@ textarea:focus {
 }
 
 .attachmentMods input {
-	flex:1;
+	-webkit-flex:1;
+	    -ms-flex:1;
+	        flex:1;
 	padding-left: 0.3rem;
 }
 
