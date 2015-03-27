@@ -16,9 +16,8 @@ $(document).ready(function() {
 		container.append(rowTemplate[container.data('section')]);
 	}
 
-	$('.addRowButton').on('click', insertNewRow);
-
 	function displayData() {
+		$('.trained').removeClass('trained');
 		for(var i = 0 in character_sheet) {
 			if(i == "character_basic") {
 				for(var ii = 0 in character_sheet[i]) {
@@ -65,6 +64,7 @@ $(document).ready(function() {
 				}
 			}
 		}
+		calculateData();
 	}
 
 	function calculateData() {
@@ -88,7 +88,6 @@ $(document).ready(function() {
 				console.log("Character Sheet retrieved and parsed.");
 				console.log(character_sheet);
 				displayData();
-				calculateData();
 			}
 		});
 	}
@@ -131,12 +130,37 @@ $(document).ready(function() {
 		});
 	}
 
+	function setTrained() {
+		var selectedRank = $(this).index() + 1;
+		var inputField = $(this).parent().siblings('[data-entry]');
+		var currentRank = inputField.val();
+		
+		if(selectedRank != currentRank) {
+			var confirmation = confirm("Change " + inputField.attr('data-entry') + " from " + currentRank + " to " + selectedRank + "?");
+			if(confirmation) {
+				inputField.attr('value', selectedRank);
+				sendCharacterSheet();
+			}
+		} else {
+			var confirmation = confirm("Set rank to 0 for " + inputField.attr('data-entry') + "?");
+			if(confirmation) {
+				inputField.attr('value', 0);
+				sendCharacterSheet();
+			}
+		}
+		displayData();
+	}
+
 	getCharacterSheet();
 
+	// EVENT HANDLERS
 	$(document).keypress("s",function(e) {
 		if(e.ctrlKey) {
-			e.preventDefault();
+			e.preventDefault();	
 			sendCharacterSheet();
 		}
 	});
+	$('.addRowButton').on('click', insertNewRow);
+	$('.skillRank').on('click', setTrained);
+	$(document).on('beforeunload', sendCharacterSheet);
 });
