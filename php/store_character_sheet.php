@@ -46,23 +46,26 @@
                             if (is_array($character_sheet[$key_i][$key_ii])) {
                                 $query_string = "INSERT INTO `" . $key_i . "` (`id`, `character_id`, ";
                                 $placeholders = ":id, :character_id, ";
+                                $deleteSelector = "; DELETE FROM `" . $key_i . "` WHERE ";
                                 $placeholders_update = "`character_id`=:character_id, ";
                                 $i = 0;
                                 $max = count($character_sheet[$key_i][$key_ii]);
                                 foreach ($character_sheet[$key_i][$key_ii] as $key_iii => $value) {
                                     $i++;
                                     $query_string .= "`" . $key_iii . "`";
+                                    $deleteSelector .= "`" . $key_iii . "` = '' ";
                                     $placeholders .= ":" . $key_iii;
                                     $placeholders_update .= "`" . $key_iii . "`=:" . $key_iii;
 
                                     if ($i < $max) {
                                         $query_string .= ", ";
+                                        $deleteSelector .= "AND ";
                                         $placeholders .= ", ";
                                         $placeholders_update .= ", ";
                                     }
                                 }
 
-                                $query_string .= ") VALUES (" . $placeholders . ") ON DUPLICATE KEY UPDATE " . $placeholders_update;
+                                $query_string .= ") VALUES (" . $placeholders . ") ON DUPLICATE KEY UPDATE " . $placeholders_update . $deleteSelector;
                                 echo "    > " . $query_string;
                                 $query = $db->prepare($query_string);
                                 

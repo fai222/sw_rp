@@ -739,7 +739,7 @@
 
                                 <div class="row">
                                     <div class="addTalent">
-                                        <div class="addTalentButton">+</div>
+                                        <div class="addTalentButton addRowButton">+</div>
                                         <p>Add talent / ability</p>
                                     </div>
                                 </div>
@@ -846,7 +846,7 @@
 
                             <div class="row">
                                 <div class="addWeapon">
-                                    <div class="addWeaponButton">+</div>
+                                    <div class="addWeaponButton addRowButton">+</div>
                                     <p>Add weapon</p>
                                 </div>
                             </div>
@@ -908,7 +908,7 @@
 
                                 <div class="row">
                                     <div class="addArmor">
-                                        <div class="addArmorButton">+</div>
+                                        <div class="addArmorButton addRowButton">+</div>
                                         <p>Add Armor</p>
                                     </div>
                                 </div>
@@ -951,7 +951,7 @@
 
                                 <div class="row">
                                     <div class="addItem">
-                                        <div class="addItemButton">+</div>
+                                        <div class="addItemButton addRowButton">+</div>
                                         <p>Add Item</p>
                                     </div>
                                 </div>
@@ -1000,7 +1000,7 @@
                             </div>
                             <div class="row">
                                 <div class="addObligation">
-                                    <div class="addObligationButton">+</div>
+                                    <div class="addObligationButton addRowButton">+</div>
                                     <p>Add Obligation</p>
                                 </div>
                             </div>
@@ -1024,7 +1024,7 @@
                             </div>
                             <div class="row">
                                 <div class="addMotivation">
-                                    <div class="addMotivationButton">+</div>
+                                    <div class="addMotivationButton addRowButton">+</div>
                                     <p>Add Motivation</p>
                                 </div>
                             </div>
@@ -1100,7 +1100,7 @@
 
                 <div class="row">
                     <div class="addAttachment">
-                        <div class="addAttachmentButton">+</div>
+                        <div class="addAttachmentButton addRowButton">+</div>
                         <p>Add Attachment</p>
                     </div>
                 </div>
