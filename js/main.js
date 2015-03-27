@@ -69,16 +69,16 @@ $(document).ready(function() {
 
 	function calculateData() {
 		//Wound threshold
-		var wounds = parseInt($('#wounds_base_threshold').attr('value')) + parseInt($('#brawn').attr('value'));
-		$('#wounds_threshold').attr('value', wounds);
+		var wounds = parseInt($('#wounds_base_threshold').val()) + parseInt($('#brawn').val());
+		$('#wounds_threshold').val(wounds);
 
 		//Strain threshold
-		var strain = parseInt($('#strain_base_threshold').attr('value')) + parseInt($('#willpower').attr('value'));
-		$('#strain_threshold').attr('value', strain);
+		var strain = parseInt($('#strain_base_threshold').val()) + parseInt($('#willpower').val());
+		$('#strain_threshold').val(strain);
 
 		//Soak value
-		var soak = parseInt($('#brawn').attr('value'));
-		$('#soak_value').attr('value', soak);
+		var soak = parseInt($('#brawn').val());
+		$('#soak_value').val(soak);
 	}
 
 	function getCharacterSheet() {
