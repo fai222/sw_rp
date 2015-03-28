@@ -79,7 +79,8 @@
                                 $query->execute();
                                 $query = null;
                             } else {
-                                /*$query_string = "INSERT INTO `" . $key_i . "` (";
+                                // TO DO, GENERATES SEVERAL ENTRIES
+                                $query_string = "INSERT INTO `" . $key_i . "` (`character_id`, ";
                                 $placeholders = ":character_id, ";
                                 $placeholders_update = "";
                                 $i = 0;
@@ -107,7 +108,7 @@
                                 }
 
                                 $query->execute();
-                                $query = null;*/
+                                $query = null;
                                 echo "NOT ROW!";
                             }
                         }
