@@ -20,6 +20,8 @@
     <body>
         <div class="savedContainer loading"></div>
 
+        <div class="saveButton"><img src="img/icon_save.png" width="100%" height="auto"></div>
+
         <div class="wrapper">
             <div class="row container char" data-section="character_basic">
                 <div class="large-6 medium-5 small-12 columns charInputContainer">

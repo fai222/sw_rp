@@ -125,6 +125,17 @@ textarea:focus {
 	font-size: 20px;
 }
 
+.saveButton {
+	position: fixed;
+	background-color: #1D1D1D;
+	bottom: 0;
+	transform: translateX(-50%);
+	left: 50%;
+	padding: 1rem;
+	z-index: 100;
+	width: 70px;
+}
+
 .char {
 	height: 240px;
 	padding: 2.5rem;
