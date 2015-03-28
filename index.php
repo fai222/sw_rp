@@ -756,19 +756,19 @@
                     </div>
 
                     <div class="row gearInfoContainer">
-                        <div class="medium-6 columns creditsContainer">
+                        <div class="medium-6 columns creditsContainer" data-section="character_basic">
                             <h3>Credits:</h3>
-                            <input id="credits" class="creditsInput" type="text"/>
+                            <input id="credits" class="creditsInput" data-entry="credits" type="text"/>
                         </div>
-                        <div class="medium-6 columns encumbranceContainer">
+                        <div class="medium-6 columns encumbranceContainer" data-section="">
                             <h3>
                                 Encumbrance threshold:
                                 <span class="encumbranceThreshold">
-                                    11
+                                    -
                                 </span>
                                 Current: 
                                 <span class="encumbranceCurrent underThreshold">
-                                    7
+                                    -
                                 </span>
                             </h3>
                         </div>
@@ -975,9 +975,9 @@
                                 <textarea id="description_text" data-entry="text"></textarea>
                             </div>
                         </div>
-                        <div class="large-4 medium-6 columns obligationContainer" data-section="obligation">
+                        <div class="large-4 medium-6 columns obligationContainer">
                             <h2>Obligations</h2>
-                            <div class="obligationRowContainer">
+                            <div class="obligationRowContainer" data-section="obligation">
                                 <div class="row obligationRow" data-rowId="">
                                     <div class="row obligationType">
                                         <h3>Type:</h3>
@@ -1006,10 +1006,10 @@
                             </div>
                         </div>
 
-                        <div class="large-4 medium-6 columns motivationContainer" data-section="motivation">
+                        <div class="large-4 medium-6 columns motivationContainer">
                             <h2>Motivations</h2>
 
-                            <div class="motivationRowContainer">
+                            <div class="motivationRowContainer" data-section="motivation">
                                 <div class="row motivationRow" data-rowId="">
                                     <div class="row motivationType">
                                         <h3>Type:</h3>
