@@ -535,7 +535,7 @@ textarea:focus {
 }
 
 .tabsContainer {
-	padding: 0.5rem;
+	padding: 0 0.5rem;
 	transition:all 0.3s ease;
 	margin-top: 1rem;
 	outline: none;
@@ -579,9 +579,9 @@ textarea:focus {
     border-width: 4px;
     left: 50%;
     bottom: 0;
-    -webkit-transform:translateX(-50%) translateY(0px);
-        -ms-transform:translateX(-50%) translateY(0px);
-            transform:translateX(-50%) translateY(0px);
+    -webkit-transform:translateX(-50%) translateY(7px);
+        -ms-transform:translateX(-50%) translateY(7px);
+            transform:translateX(-50%) translateY(7px);
     transition:all 0.4s ease;
 }
 
@@ -589,18 +589,18 @@ textarea:focus {
 	content: "";
 	bottom: 0px;
     left: 50%;
-    -webkit-transform:translateX(-50%) translateY(-7px);
-        -ms-transform:translateX(-50%) translateY(-7px);
-            transform:translateX(-50%) translateY(-7px);
+    -webkit-transform:translateX(-50%) translateY(0px);
+        -ms-transform:translateX(-50%) translateY(0px);
+            transform:translateX(-50%) translateY(0px);
 }
 
 .tabsContainer.active a:after {
 	content: "";
 	bottom: 0px;
     left: 50%;
-    -webkit-transform:translateX(-50%) translateY(-7px);
-        -ms-transform:translateX(-50%) translateY(-7px);
-            transform:translateX(-50%) translateY(-7px);
+    -webkit-transform:translateX(-50%) translateY(0px);
+        -ms-transform:translateX(-50%) translateY(0px);
+            transform:translateX(-50%) translateY(0px);
 }
 
 .tabsContainer h2 {
@@ -613,7 +613,7 @@ textarea:focus {
 
 @media only screen and (max-width: 64em) {
 	.tabsContainer {
-		padding: 0;
+		padding: 0 0.5rem;
 	}
 
 	.tabsContainer a:after {
@@ -654,7 +654,8 @@ textarea:focus {
 
 @media only screen and (max-width: 40em) {
 	.tabsContainer {
-		padding: 0.5rem 0;
+		padding: 0rem 0;
+		margin-top: 1rem;
 	}
 }
 
