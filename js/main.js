@@ -163,4 +163,5 @@ $(document).ready(function() {
 	$('.addRowButton').on('click', insertNewRow);
 	$('.skillRank').on('click', setTrained);
 	$(document).on('beforeunload', sendCharacterSheet);
+	$('.saveButton').on('click', sendCharacterSheet);
 });
