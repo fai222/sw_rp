@@ -78,6 +78,9 @@ $(document).ready(function() {
 
 		//Soak value
 		var soak = parseInt($('#brawn').val());
+		$('[data-entry="soak"]').each(function(){
+			soak += parseInt($(this).val());
+		});
 		$('#soak_value').val(soak);
 	}
 
@@ -126,6 +129,7 @@ $(document).ready(function() {
 				console.log(status + ": " + data);
 				console.log("FETCHING DATA!");
 				getCharacterSheet();
+				alert("Saved!");
 			}
 		});
 	}
